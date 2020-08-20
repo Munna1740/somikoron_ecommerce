@@ -1,0 +1,99 @@
+{% extends 'shop/nav_footer.html' %}
+{% block body %}
+    {% load static %}
+
+
+    <!DOCTYPE html>
+    <html lang="en" xmlns="http://www.w3.org/1999/html" >
+    <!-- Mirrored from afinda.vn/html/Ogami/shop_order_complete.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jun 2020 12:00:56 GMT -->
+    <head >
+        {#        <title >Order Complete</title >#}
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" >
+        <meta name="keywords"
+              content="blog, business, clean, clear, cooporate, creative, design web, flat, marketing, minimal, portfolio, shop, shopping, unique" >
+        <meta name="author" content="MARTECH | Deer Creative Theme" >
+        <link rel="stylesheet" href="{% static 'assets/css/invoice_style.css' %}" >
+        {#        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"#}
+        {#                integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous" ></script >#}
+    </head >
+    <body >
+    <!-- End order step-->
+    {% load mathfilters %}
+    <div class="order-complete" >
+        <div class="container" >
+            <div class="row" >
+                <div class="col-12 justify-content-center align-items-center text-center" >
+                    <div id="invoiceholder" style="padding-top: 0px !important;" >
+                        <div id="headerimage" ></div >
+                        <div id="invoice" class="effect2" >
+                            <div id="invoice-top" style="" >
+                                <div class="logo" ><img src="{% static 'assets/images/logo.png' %}" alt="" style="width: 200px !important;" >
+                                </div >
+                                <div class="" style="float: right; padding-right: 20px" >
+                                    <h1 style="padding: 0px; margin: 0px; color: #cb241b" >Order #{{ object.id }}</h1 >
+                                    <p >Issued: {% now "jS F Y H:i" %} </br>
+                                        {#                                            {% now "SHORT_DATETIME_FORMAT" %}#}
+                                    </p >
+                                </div ><!--End Title-->
+                            </div ><!--End InvoiceTop-->
+                            <div id="invoice-bot" >
+                                <div id="table" >
+                                    <table >
+                                        <tr class="tabletitle" style="padding: 0px !important; height: 20px !important;">
+                                            <td class="item text-center" style="width: 60%; margin: 0px; padding: 0px" ><h2 style="color: white;margin: 0px; padding: 0px" >Order List</h2 ></td >
+                                            <td class="item text-center" style="width: 38%" ><h2 style="color: white" >Delivery Address</h2 ></td >
+                                        </tr >
+                                        <tr class="service" >
+                                            <td class="tableitem" ><p class="itemtext"
+                                                                      style="text-align: left" >{{ object.order_list }}</p >
+                                            </td >
+                                            <td class="tableitem" >
+                                                <h2 >Name: {{ address.customer_name }}</h2 >
+                                                            <h2 > Area: {{ address.area }}</h2 >
+                                                            <p style="width: 100%" >Address: {{ address.address }}<br >
+                                                                                    Mobile: {{ address.customer_phone }}<br >
+                                                            </p >
+                                            </td >
+                                        </tr >
+                                    </table >
+                                </div ><!--End Table-->
+                            </div >
+                            <div id="" style="position: relative; padding: 0px 40px" >
+                                <p class="legal" style="padding-bottom: 20px; width: 100%" ><strong >We will send you the complete invoice after confirming your order. Thank you.</strong > 
+                                </p >
+                            </div >
+                        </div ><!--End InvoiceBot-->
+                    </div ><!--End Invoice-->
+                </div ><!-- End Invoice Holder-->
+            </div >
+        </div >
+    </div >
+    </div >
+    <!-- End order complete-->
+    {#    <script language="javascript" >#}
+    {#        var cache_width = $('#invoiceholder').width(); //Criado um cache do CSS#}
+    {#        var a4 = [595.28, 841.89]; // Widht e Height de uma folha a4#}
+    {##}
+    {#        $(document).on("click", '#export', function () {#}
+    {#            // Setar o width da div no formato a4#}
+    {#            $("#invoiceholder").width((a4[0] * 1.33333) - 80).css('max-width', 'none');#}
+    {##}
+    {#            // Aqui ele cria a imagem e cria o pdf#}
+    {#            html2canvas($('#invoiceholder'), {#}
+    {#                onrendered: function (canvas) {#}
+    {#                    var img = canvas.toDataURL("image/jpeg", 1.0);#}
+    {#                    //var doc = new jsPDF({ unit: 'px', format: 'a4' });//this line error#}
+    {#                    var doc = new jsPDF('landscape'); // default is portrait#}
+    {#                    doc.addImage(img, 'JPEG', 20, 20);#}
+    {#                    doc.save('NOME-DO-PDF.pdf');#}
+    {#                    //Retorna ao CSS normal#}
+    {#                    $('#renderPDF').width(cache_width);#}
+    {#                }#}
+    {#            });#}
+    {#        });#}
+    {#    </script >#}
+    <!-- Mirrored from afinda.vn/html/Ogami/shop_order_complete.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jun 2020 12:00:56 GMT -->
+    </body >
+    </html >
+{% endblock %}

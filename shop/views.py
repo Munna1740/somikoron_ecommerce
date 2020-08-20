@@ -48,7 +48,7 @@ def user_login(request):
                 user = authenticate(request, username=username, password=password)
                 if user is not None:
                     login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-                    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+                    return redirect('shop:home')
                 else:
                     messages.info(request, 'Username OR password is incorrect')
 
@@ -64,8 +64,9 @@ def user_login(request):
                 else:
                     messages.success(request, 'Please enter correctly ')
         form = SignUpForm()
-        context = {'form': form,
-                   'page_title': page_titles["login-page"]}
+        context = {
+            'form'      : form,
+            'page_title': page_titles["login-page"]}
         return render(request, 'shop/custom_login.html', context)
 
 
@@ -427,13 +428,15 @@ def cart_demo(request):
 
 
 def about_us(request):
-    return render(request, 'shop/about_us.html', {'categories': get_categories(),
-                                                  'page_title': page_titles["about-page"]})
+    return render(request, 'shop/about_us.html', {
+        'categories': get_categories(),
+        'page_title': page_titles["about-page"]})
 
 
 def contact_us(request):
-    return render(request, 'shop/contact.html', {'categories': get_categories(),
-                                                 'page_title': page_titles["contact-page"]})
+    return render(request, 'shop/contact.html', {
+        'categories': get_categories(),
+        'page_title': page_titles["contact-page"]})
 
 
 @csrf_exempt
@@ -486,3 +489,54 @@ def delivery_status(request):
         'orders'    : order,
     }
     return render(request, 'shop/delivery_status.html', context)
+
+
+def monthly_shopping(request):
+    return render(request, 'monthly_order/monthly_market.html')
+
+
+def place_monthly_order(request):
+    if request.method == 'POST':
+        phone = request.POST['c_phone']
+        name = request.POST['c_name']
+        area = request.POST['c_area']
+        full_address = request.POST['c_address']
+        order_list = request.POST['order_list']
+        payment_method = request.POST['m_payment']
+
+        # create user account if does not exist
+        if not request.user.is_authenticated:
+            if not User.objects.filter(username=phone).exists():
+                user, created = User.objects.get_or_create(username=phone)
+                user.set_password("somikoron")
+                user.save()
+                login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+                messages.success(request, 'An account has been created for ' + phone + '\nusername: ' + phone + ' and password: somikoron')
+
+        address, created = Address.objects.get_or_create(user = request.user)
+        address.area = area
+        address.customer_name = name
+        address.customer_phone = phone
+        address.address = full_address
+        address.save()
+
+        monthly_order = MonthlyPackage.objects.create(user = request.user, shipping_address=address, order_list=order_list,payment_method=payment_method)
+        monthly_order.save()
+        messages.success(request, 'Your order has been placed. We will confirm your order soon.')
+        return redirect(f'/monthly_order_invoice/{monthly_order.pk}')
+    messages.success(request, 'Failed to place your order')
+    return redirect('shop:home')
+
+@login_required
+def monthly_order_invoice(request, orderid):
+    order = MonthlyPackage.objects.get(id = orderid)
+    address = Address.objects.get(user_id=order.user_id)
+    context = {
+        'address': address,
+        'object': order,
+    }
+    return render(request, 'monthly_order/order_invoice.html',context)
+
+
+
+

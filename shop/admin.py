@@ -26,4 +26,5 @@ admin.site.register(Order)
 admin.site.register(Address)
 admin.site.register(OwnerInfo)
 admin.site.register(CattleInfo)
+admin.site.register(MonthlyPackage)
 

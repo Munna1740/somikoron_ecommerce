@@ -26,17 +26,20 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
+
 class OwnerInfo(models.Model):
-    owner_name = models.CharField(max_length= 50)
+    owner_name = models.CharField(max_length=50)
     phone = models.CharField(max_length=15)
     address = models.CharField(max_length=200)
 
     def __str__(self):
         return self.owner_name
 
+
 class Category(models.Model):
     category_name = models.CharField(max_length=100)
     category_id = models.CharField(max_length=10)
+
     def __str__(self):
         return self.category_name
 
@@ -49,7 +52,7 @@ class Category(models.Model):
 class SubCategory(models.Model):
     sub_category_name = models.CharField(max_length=100)
     category = models.ForeignKey(
-        Category, on_delete=models.SET_NULL, null=True, blank = True
+        Category, on_delete=models.SET_NULL, null=True, blank=True
     )
 
     def __str__(self):
@@ -71,7 +74,8 @@ class Items(models.Model):
     slug = models.SlugField()
     description = models.TextField()
     item_owner = models.ForeignKey(OwnerInfo, on_delete=models.SET_NULL, \
-                                                                        null=True, blank=True)
+                                   null=True, blank=True)
+
     # image = models.ImageField(u'Images')
     # class Meta:
     #     ordering = ['-update_date']
@@ -120,34 +124,37 @@ class ItemDetails(models.Model):
         })
 
     def get_discounted_price(self):
-        if self.discount_offer>=1:
+        if self.discount_offer >= 1:
             return self.item.price - self.discount_offer
         else:
             return (self.item.price) - (self.discount_offer * self.item.price)
 
+
 class CattleInfo(models.Model):
     item = models.OneToOneField(Items, on_delete=models.CASCADE, related_name='cattleinfo')
     height = models.CharField(max_length=15, null=True, blank=True)
-    live_weight = models.FloatField(max_length=10,null=True, blank=True)
-    expected_weight = models.FloatField(max_length=10,null=True, blank=True)
-    Breed = models.CharField(max_length=30,null=True, blank=True)
+    live_weight = models.FloatField(max_length=10, null=True, blank=True)
+    expected_weight = models.FloatField(max_length=10, null=True, blank=True)
+    Breed = models.CharField(max_length=30, null=True, blank=True)
 
     def __str__(self):
-        return self.item.item_owner.owner_name +"-"+ self.item.title
+        return self.item.item_owner.owner_name + "-" + self.item.title
+
 
 class ItemImages(models.Model):
     item = models.ForeignKey(
-        Items, on_delete=models.CASCADE, related_name='images',null=True,blank=True,
+        Items, on_delete=models.CASCADE, related_name='images', null=True, blank=True,
 
     )
     # image = StdImageField(upload_to='media/images/')
     # image1 = StdImageField(upload_to='path/to/img')  # works as ImageField
     # image2 = StdImageField(upload_to='path/to/img', blank=True)  # can be deleted throwgh admin
-    # image3 = StdImageField(upload_to='path/to/img', variations={'thumbnail': (100, 75)})  # creates a thumbnail resized to maximum size to fit a 100x75 area
+    # image3 = StdImageField(upload_to='path/to/img', variations={'thumbnail': (100, 75)})  # creates a thumbnail resized to maximum size to fit a
+    # 100x75 area
     # image4 = StdImageField(upload_to='path/to/img', variations={'thumbnail': (100, 100, True)})
-    image = StdImageField(upload_to='media/images/', blank=True, variations={ 'thumbnail': (220,
-                                                                                            140)}, delete_orphans=True) # all previous features in one declaration
-
+    image = StdImageField(upload_to='media/images/', blank=True, variations={
+        'thumbnail': (220,
+                      140)}, delete_orphans=True)  # all previous features in one declaration
 
     def __str__(self):
         return str(self.item.product_code) + " " + self.item.title
@@ -196,6 +203,7 @@ class Order(models.Model):
 
     def __str__(self):
         return f"{self.user} - {self.ordered}- {self.order_status}"
+
     # billing_address = models.ForeignKey(
     #     'Address', related_name='billing_address', on_delete=models.SET_NULL, blank=True,
     #     null=True)
@@ -230,7 +238,6 @@ class Order(models.Model):
         return total
 
 
-
 class Address(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
                              on_delete=models.CASCADE)
@@ -238,9 +245,6 @@ class Address(models.Model):
     customer_phone = models.CharField(max_length=15)
     area = models.CharField(max_length=30)
     address = models.CharField(max_length=200)
-
-
-
 
     # address_type = models.CharField(max_length=1, choices=ADDRESS_CHOICES)
     # default = models.BooleanField(default=False)
@@ -251,3 +255,17 @@ class Address(models.Model):
     class Meta:
         verbose_name_plural = 'Addresses'
 
+
+class MonthlyPackage(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    order_list = models.TextField(max_length=700)
+    order_date = models.DateTimeField(auto_now_add=True)
+    order_status = models.CharField(max_length=20, choices=ORDER_STATUS, default='PLACED')
+    payment_method = models.CharField(max_length=12, null=True, blank=True, default='CASH ON')
+    payment_status = models.CharField(max_length=12, null=True, blank=True, default='PENDING')
+    shipping_address = models.ForeignKey(
+        'Address', related_name='monthly_shipping_address', on_delete=models.SET_NULL, blank=True,
+        null=True)
+
+    def __str__(self):
+        return f"{self.user} - {self.order_status}"

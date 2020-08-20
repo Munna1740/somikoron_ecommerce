@@ -11,7 +11,7 @@ django-filter==2.3.0
 django-jet==1.0.8
 django-mathfilters==1.0.0
 django-stdimage==5.1.1
-django-suit==2.0a1
+django-suit
 djangorestframework==3.11.0
 feedparser==5.2.1
 future==0.18.2

@@ -1,9 +1,21 @@
 {% extends 'shop/nav_footer.html' %}
 {% block body %}
     {% load cart_template_tags %}
+    {% load  static %}
     <!DOCTYPE html>
     <html lang="en" >
     <head >
+        {#        <link rel="stylesheet" href="{% static 'assets/css/slider_css/all.min.css' %}" />#}
+        {#        <link rel="stylesheet" href="{% static 'assets/css/slider_css/bootstrap.min.css' %}" />#}
+        {#        <!-- slick slider css -->#}
+        {#        <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}" />#}
+        {#        <link rel="stylesheet" href="{% static 'assets/css/slider_css/slick-theme.css' %}" />#}
+        <!-- <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+        /> -->
+        {#        <link rel="stylesheet" href="{% static 'assets/css/slider_css/animate.min.css' %}" />#}
+        {#        <link rel="stylesheet" href="{% static 'assets/css/slider_css/style.css' %}" />#}
         <title >{% block head_title %} সমীকরণ.কম - Online Shopping in Dhaka {% endblock %}</title >
         {% load static %}
         {#        <style type="text/css" >#}
@@ -26,15 +38,207 @@
             #main {
                 margin-top: 75px !important;
             }
+
             @media (max-width: 575px) {
                 #main {
                     margin-top: 0px !important;
                 }
             }
+
+            .main_home_banner .main_home_slider_image {
+                height: 73vh !important;
+                width: 100%;
+                background-position: center !important;
+                background-size: cover !important;
+                position: relative;
+                z-index: -1;
+                overflow-x: hidden !important;
+            }
+
+            .main_home_banner .slick-dots {
+                text-align: center;
+                position: absolute !important;
+                z-index: 99 !important;
+                bottom: 40px !important;
+                left: 0% !important;
+                overflow-x: hidden !important;
+            }
+
+            .custom_slider_section {
+                margin: 0 !important;
+                padding: 0 !important;
+                outline: none !important;
+                overflow-x: hidden !important;
+            }
+
+            ul.slick-dots li {
+                display: inline-block;
+
+                border-radius: 50% !important;
+                border: 2px solid #f1f1f1;
+                margin: 0 5px;
+                cursor: pointer !important;
+            }
+
+            /* ul.slick-dots li button */
+            .slick-dots li button {
+                background: transparent !important;
+                border-radius: 50%;
+                color: transparent !important;
+                height: 15px !important;
+                outline: none !important;
+                border: none !important;
+                border-radius: 50% !important;
+                width: 15px !important;
+            }
+
+            .slick-dots .slick-active {
+                /* color: #fff !important; */
+                height: 100% !important;
+
+                background-color: crimson !important;
+                z-index: 99;
+            }
+
+            /* .slick-dots li button::before {
+              background: crimson !important;
+              border-radius: 50%;
+              z-index: 99 !important;
+            } */
         </style >
+        <script >
+        </script >
     </head >
     <body >
     <div id="main" >
+        <section class="custom_slider_section" >
+            <div class="main_home_banner" >
+                <div
+                        class="main_home_slider_image"
+                        style="background: url({% static 'assets/images/custom_slider_images/slider1.jpg' %})"
+                >
+                    <div class="main_home_slider_mid" >
+                        <div class="container" >
+                            <div class="row" >
+                                <div class="col-lg-8" >
+                                    <div class="slide_text" >
+                                        <p class="caption original_product" >Not Fried Not Baked</p >
+                                        <h2 class="caption" style="animation-delay: 0.6s" >
+                                            Freeze Dried fruits
+                                        </h2 >
+                                        <h2 class="caption" style="animation-delay: 0.4s" >
+                                            Pineapple Cocounut
+                                        </h2 >
+                                        <p class="caption" style="animation-delay: 0.2s" >
+                                            Free Shipping on Qualified Order over $35
+                                        </p >
+                                        <button
+                                                class="slid_btn animate_add"
+                                                style="animation-delay: 0.7s"
+                                        >
+                                            order
+                                        </button >
+                                    </div >
+                                </div >
+                            </div >
+                        </div >
+                    </div >
+                </div >
+                <div
+                        class="main_home_slider_image"
+                        style="background: url({% static 'assets/images/custom_slider_images/slider2.jpg' %})"
+                >
+                    <div class="main_home_slider_mid" >
+                        <div class="container" >
+                            <div class="row" >
+                                <div class="col-lg-8" >
+                                    <div class="slide_text" >
+                                        <p class="caption original_product" >100% natural</p >
+                                        <h2 class="caption" style="animation-delay: 0.6s" >
+                                            Organic Fruit
+                                        </h2 >
+                                        <h2 class="caption" style="animation-delay: 0.4s" >
+                                            Summer Drinks
+                                        </h2 >
+                                        <p class="caption" style="animation-delay: 0.2s" >
+                                            Free Shipping on Qualified Order over $35
+                                        </p >
+                                        <button
+                                                class="slid_btn animate_add"
+                                                style="animation-delay: 0.7s"
+                                        >
+                                            order
+                                        </button >
+                                    </div >
+                                </div >
+                            </div >
+                        </div >
+                    </div >
+                </div >
+                <div
+                        class="main_home_slider_image"
+                        style="background: url({% static 'assets/images/custom_slider_images/sample-7.jpg' %})"
+                >
+                    <div class="main_home_slider_mid" >
+                        <div class="container" >
+                            <div class="row" >
+                                <div class="col-lg-8" >
+                                    <div class="slide_text" >
+                                        <p class="caption original_product" >Pure Product</p >
+                                        <h2 class="caption" style="animation-delay: 0.6s" >
+                                            Somikoron Product
+                                        </h2 >
+                                        <h2 class="caption" style="animation-delay: 0.4s" >
+                                            Pineapple Cocounut
+                                        </h2 >
+                                        <p class="caption" style="animation-delay: 0.2s" >
+                                            Free Shipping on Qualified Order over $35
+                                        </p >
+                                        <button
+                                                class="slid_btn animate_add"
+                                                style="animation-delay: 0.7s"
+                                        >
+                                            order
+                                        </button >
+                                    </div >
+                                </div >
+                            </div >
+                        </div >
+                    </div >
+                </div >
+                <div
+                        class="main_home_slider_image"
+                        style="background: url({% static 'assets/images/custom_slider_images/sample-8.jpg' %})"
+                >
+                    <div class="main_home_slider_mid" >
+                        <div class="container" >
+                            <div class="row" >
+                                <div class="col-lg-8" >
+                                    <div class="slide_text" >
+                                        <p class="caption original_product" >Pure Product</p >
+                                        <h2 class="caption" style="animation-delay: 0.6s" >
+                                            Somikoron Product
+                                        </h2 >
+                                        <h2 class="caption" style="animation-delay: 0.4s" >
+                                            Pineapple Cocounut
+                                        </h2 >
+                                        <p class="caption" style="animation-delay: 0.2s" >
+                                            Free Shipping on Qualified Order over $35
+                                        </p >
+                                        <button
+                                                class="slid_btn animate_add"
+                                                style="animation-delay: 0.7s"
+                                        >
+                                            order
+                                        </button >
+                                    </div >
+                                </div >
+                            </div >
+                        </div >
+                    </div >
+                </div >
+            </div >
+        </section >
         <header class="coffee-2" >
             <div class="navigation-filter" >
                 <div class="container" >
@@ -61,6 +265,10 @@
                                                                 <li ><a href="{{ subcat.get_absolute_url }}" >
                                                                     <i >
                                                                         <img STYLE="width: 20px" src="
+
+
+
+
                                                                                 {% static 'assets/images/custom_icons/flatIcon/' %}{{ cat.category_id }}.png"
                                                                              alt="" >
                                                                     </i >{{ subcat.sub_category_name }}</a ></li >
@@ -75,114 +283,114 @@
                             </div >
                         </div >
                         <div class="col-12 col-md-8 col-lg-8 col-xl-8 order-1 order-md-1" >
-                            <div class="banner_v3" >
-                                <div class="container" >
-                                    <div class="row" >
-                                        <div class="col-12 col-xl-12" >
-                                            <main class="main" >
-                                                <style >
-                                                    * {
-                                                        margin: 0;
-                                                        padding: 0;
-                                                        box-sizing: border-box;
-                                                        list-style: none;
-                                                        text-decoration: none;
-                                                    }
-
-
-                                                    .container {
-                                                        max-width: 75rem;
-                                                        width: 100%;
-                                                        margin: 0 auto;
-                                                    }
-
-                                                    .main .container .swiper-container .swiper-wrapper .swiper-slide .card-image {
-                                                        background: #ffffff;
-                                                        border: none;
-                                                        outline: none;
-                                                        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-                                                        border-radius: 2px;
-                                                    }
-
-                                                    .main .container .swiper-container .swiper-wrapper .swiper-slide .card-image img {
-                                                        display: block;
-                                                        position: relative;
-                                                        left: 0;
-                                                        bottom: 0;
-                                                        width: 100%;
-                                                        height: auto;
-                                                        -o-object-fit: cover;
-                                                        object-fit: cover;
-                                                    }
-
-                                                    .main .container .swiper-container .swiper-pagination-bullet {
-                                                        opacity: 0.8;
-                                                        background: #333333;
-                                                    }
-
-                                                    .main .container .swiper-container .swiper-pagination-bullet-active {
-                                                        background: #ffffff;
-                                                    }
-
-                                                    .main .container .swiper-container .swiper-button-next,
-                                                    .main .container .swiper-container .swiper-button-prev {
-                                                        background-image: none;
-                                                        background-size: 0;
-                                                        background-repeat: no-repeat;
-                                                        background-position: 0;
-                                                        margin-top: -1rem;
-                                                    }
-
-                                                    .main .container .swiper-container .swiper-button-next .arrow-icon,
-                                                    .main .container .swiper-container .swiper-button-prev .arrow-icon {
-                                                        font-size: 2rem;
-                                                        color: #ffffff;
-                                                    }
-                                                </style >
-                                                <div class="container" >
-                                                    <div class="swiper-container" >
-                                                        <div class="swiper-wrapper" >
-                                                            <div class="swiper-slide" >
-                                                                <div class="card-image" >
-                                                                    <img src="{% static 'assets/images/banner/hBanner2.jpg' %}" loading="lazy"
-                                                                         alt="Image Slider" >
-                                                                </div >
-                                                            </div >
-                                                            <div class="swiper-slide" >
-                                                                <div class="card-image" >
-                                                                    <img src="{% static 'assets/images/banner/hBanner3.jpg' %}" loading="lazy"
-                                                                         alt="Image Slider" >
-                                                                </div >
-                                                            </div >
-                                                            <div class="swiper-slide" >
-                                                                <div class="card-image" >
-                                                                    <img src="{% static 'assets/images/banner/hBanner1.jpg' %}" loading="lazy"
-                                                                         alt="Image Slider" >
-                                                                </div >
-                                                            </div >
-                                                            <div class="swiper-slide" >
-                                                                <div class="card-image" >
-                                                                    <img src="{% static 'assets/images/banner/hBanner4.jpg' %}" loading="lazy"
-                                                                         alt="Image Slider" >
-                                                                </div >
-                                                            </div >
-                                                        </div >
-                                                        <!-- Add Pagination -->
-                                                        <div class="swiper-pagination" ></div >
-                                                        <!-- Add Scrollbar -->
-                                                        <div class="swiper-button-next" >
-                                                            <i class="fas fa-chevron-circle-right arrow-icon" ></i >
-                                                        </div >
-                                                        <div class="swiper-button-prev" >
-                                                            <i class="fas fa-chevron-circle-left arrow-icon" ></i >
-                                                        </div >
-                                                    </div >
-                                                </div >
-                                            </main >
-                                        </div >
-                                    </div >
-                                </div >
-                            </div >
+                            {#                            <div class="banner_v3" >#}
+                            {#                                <div class="container" >#}
+                            {#                                    <div class="row" >#}
+                            {#                                        <div class="col-12 col-xl-12" >#}
+                            {#                                            <main class="main" >#}
+                            {#                                                <style >#}
+                            {#                                                    * {#}
+                            {#                                                        margin: 0;#}
+                            {#                                                        padding: 0;#}
+                            {#                                                        box-sizing: border-box;#}
+                            {#                                                        list-style: none;#}
+                            {#                                                        text-decoration: none;#}
+                            {#                                                    }#}
+                            {##}
+                            {##}
+                            {#                                                    .container {#}
+                            {#                                                        max-width: 75rem;#}
+                            {#                                                        width: 100%;#}
+                            {#                                                        margin: 0 auto;#}
+                            {#                                                    }#}
+                            {##}
+                            {#                                                    .main .container .swiper-container .swiper-wrapper .swiper-slide .card-image {#}
+                            {#                                                        background: #ffffff;#}
+                            {#                                                        border: none;#}
+                            {#                                                        outline: none;#}
+                            {#                                                        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);#}
+                            {#                                                        border-radius: 2px;#}
+                            {#                                                    }#}
+                            {##}
+                            {#                                                    .main .container .swiper-container .swiper-wrapper .swiper-slide .card-image img {#}
+                            {#                                                        display: block;#}
+                            {#                                                        position: relative;#}
+                            {#                                                        left: 0;#}
+                            {#                                                        bottom: 0;#}
+                            {#                                                        width: 100%;#}
+                            {#                                                        height: auto;#}
+                            {#                                                        -o-object-fit: cover;#}
+                            {#                                                        object-fit: cover;#}
+                            {#                                                    }#}
+                            {##}
+                            {#                                                    .main .container .swiper-container .swiper-pagination-bullet {#}
+                            {#                                                        opacity: 0.8;#}
+                            {#                                                        background: #333333;#}
+                            {#                                                    }#}
+                            {##}
+                            {#                                                    .main .container .swiper-container .swiper-pagination-bullet-active {#}
+                            {#                                                        background: #ffffff;#}
+                            {#                                                    }#}
+                            {##}
+                            {#                                                    .main .container .swiper-container .swiper-button-next,#}
+                            {#                                                    .main .container .swiper-container .swiper-button-prev {#}
+                            {#                                                        background-image: none;#}
+                            {#                                                        background-size: 0;#}
+                            {#                                                        background-repeat: no-repeat;#}
+                            {#                                                        background-position: 0;#}
+                            {#                                                        margin-top: -1rem;#}
+                            {#                                                    }#}
+                            {##}
+                            {#                                                    .main .container .swiper-container .swiper-button-next .arrow-icon,#}
+                            {#                                                    .main .container .swiper-container .swiper-button-prev .arrow-icon {#}
+                            {#                                                        font-size: 2rem;#}
+                            {#                                                        color: #ffffff;#}
+                            {#                                                    }#}
+                            {#                                                </style >#}
+                            {#                                                <div class="container" >#}
+                            {#                                                    <div class="swiper-container" >#}
+                            {#                                                        <div class="swiper-wrapper" >#}
+                            {#                                                            <div class="swiper-slide" >#}
+                            {#                                                                <div class="card-image" >#}
+                            {#                                                                    <img src="{% static 'assets/images/banner/hBanner2.jpg' %}" loading="lazy"#}
+                            {#                                                                         alt="Image Slider" >#}
+                            {#                                                                </div >#}
+                            {#                                                            </div >#}
+                            {#                                                            <div class="swiper-slide" >#}
+                            {#                                                                <div class="card-image" >#}
+                            {#                                                                    <img src="{% static 'assets/images/banner/hBanner3.jpg' %}" loading="lazy"#}
+                            {#                                                                         alt="Image Slider" >#}
+                            {#                                                                </div >#}
+                            {#                                                            </div >#}
+                            {#                                                            <div class="swiper-slide" >#}
+                            {#                                                                <div class="card-image" >#}
+                            {#                                                                    <img src="{% static 'assets/images/banner/hBanner1.jpg' %}" loading="lazy"#}
+                            {#                                                                         alt="Image Slider" >#}
+                            {#                                                                </div >#}
+                            {#                                                            </div >#}
+                            {#                                                            <!--<div class="swiper-slide" >-->#}
+                            {#                                                            <!--    <div class="card-image" >-->#}
+                            {#                                                            <!--        <img src="{% static 'assets/images/banner/hBanner4.jpg' %}" loading="lazy"-->#}
+                            {#                                                            <!--             alt="Image Slider" >-->#}
+                            {#                                                            <!--    </div >-->#}
+                            {#                                                            <!--</div >-->#}
+                            {#                                                        </div >#}
+                            {#                                                        <!-- Add Pagination -->#}
+                            {#                                                        <div class="swiper-pagination" ></div >#}
+                            {#                                                        <!-- Add Scrollbar -->#}
+                            {#                                                        <div class="swiper-button-next" >#}
+                            {#                                                            <i class="fas fa-chevron-circle-right arrow-icon" ></i >#}
+                            {#                                                        </div >#}
+                            {#                                                        <div class="swiper-button-prev" >#}
+                            {#                                                            <i class="fas fa-chevron-circle-left arrow-icon" ></i >#}
+                            {#                                                        </div >#}
+                            {#                                                    </div >#}
+                            {#                                                </div >#}
+                            {#                                            </main >#}
+                            {#                                        </div >#}
+                            {#                                    </div >#}
+                            {#                                </div >#}
+                            {#                            </div >#}
                             <!-- End banner v3-->
                         </div >
                     </div >
@@ -322,15 +530,64 @@
                             <div id="tab-1" >
                                 <div class="row no-gutters-sm " >
                                     {% for item in offer|slice:":12" %}
-                                        <div class="col-6 col-md-4 col-lg-3 cartable" >
+                                        <div class="col-md-3 col-lg-3 cartable" >
                                             <div class="product coffee" >
+                                                <div class="cart_overlay" >
+                                                    <div class="overlay_top_price" >
+                                                        <p >৳ 160</p >
+                                                    </div >
+                                                    <div class="overlay_first" >
+                                                        <h2 >Add to cart</h2 >
+                                                        <i
+                                                                class="fa fa-arrow-down down overlay_animated"
+                                                                aria-hidden="true"
+                                                        ></i >
+                                                        <div class="shopping_bag" >
+                                                            <i class="fa fa-cart-plus bag" aria-hidden="true" ></i >
+                                                        </div >
+                                                    </div >
+                                                    <div class="overlay_second" >
+                                                        <ul class="cart_plus" >
+                                                            <li >
+                                                                <i class="fa fa-minus minus" aria-hidden="true" ></i >
+                                                            </li >
+                                                            <li >
+                                                                <div class="increment_products" >
+                                                                    <span >1</span >
+                                                                </div >
+                                                                <i
+                                                                        class="fa fa-cart-plus second_bag"
+                                                                        aria-hidden="true"
+                                                                ></i >
+                                                            </li >
+                                                            <li ><i class="fa fa-plus plus" aria-hidden="true" ></i ></li >
+                                                        </ul >
+                                                    </div >
+                                                    <div class="view_details" >
+                                                        <button class="btn-block btn_details" >view details</button >
+                                                    </div >
+                                                </div >
+                                                <!-- ================================ offer part start =========================== -->
+                                                <div class="offer" >
+                                                    <p ><span >30%</span ></p >
+                                                    <div id="circles" ></div >
+                                                </div >
+                                                <!-- ================================ offer part end =========================== -->
                                                 <div class="product_images" >
-                                                    <a class="product-img " href="{{ item.itemdetails.get_absolute_url }}" ><img
-                                                            class="img-fluid product__image" src="{{ item.images.all.0.image.thumbnail.url }}"
-                                                            alt="{{ item.images.all.0.image.url }}" ></a >
+                                                    <a class="product-img" href="{{ item.itemdetails.get_absolute_url }}"
+                                                    ><img
+                                                            class="img-fluid product__image"
+                                                            src="{{ item.images.all.0.image.thumbnail.url }}"
+                                                            alt="product image"
+                                                    /></a >
                                                 </div >
                                                 <h5 class="product-type" >{{ item.sub_category.category.category_name }}</h5 >
-                                                <h3 class="product-name" onclick="location.href='{{ item.itemdetails.get_absolute_url }}'">{{ item.title }}</h3 >
+                                                <h3
+                                                        class="product-name"
+                                                        onclick="location.href='{{ item.itemdetails.get_absolute_url }}'"
+                                                >
+                                                    {{ item.title }}
+                                                </h3 >
                                                 {% if item.itemdetails.discount_offer > 0 %}
                                                     <h3 class="product-price " ><small
                                                             style="font-size: small" >৳</small > {{ item.itemdetails.get_discounted_price }}
@@ -339,21 +596,65 @@
                                                 {% else %}
                                                     <h3 class="product-price" ><small style="font-size: small" >৳</small > {{ item.price }}</h3 >
                                                 {% endif %}
+                                                <!-- <div class="product-select">
+                                                          <button
+                                                            class="add-to-wishlist round-icon-btn coffee"
+                                                            title="Add to Favorite"
+                                                          >
+                                                            <i class="icon_heart_alt"></i>
+                                                          </button>
+                                                          <button
+                                                            class="round-icon-btn coffee quickviewbtn"
+                                                            id="quickviewbtn"
+                                                            title="Quick Details"
+                                                            data-url="/quick-view/S_SF013"
+                                                          >
+                                                            <i class="far fa-eye"></i>
+                                                          </button>
+                                                        </div> -->
+                                            </div >
+                                            <div class="cart_btn" >
                                                 <div class="openSidebar" >
                                                     <p hidden class="product__name" >{{ item.pk }}</p >
                                                     <p hidden class="product__title" >{{ item.title }}</p >
                                                     <p hidden class="product__price" >{{ item.itemdetails.get_discounted_price }}</p >
                                                     <button class="all_btn" data-action="ADD_TO_CART" name="btn{{ item.pk }}" >Add to cart</button >
                                                 </div >
-                                                <div class="product-select" >
-                                                    <button class="add-to-wishlist round-icon-btn coffee" title="Add to Favorite" ><i
-                                                            class="icon_heart_alt" ></i ></button >
-                                                    <button class="round-icon-btn coffee quickviewbtn" id="quickviewbtn" title="Quick Details"
-                                                            data-url="{% url 'shop:quick-view' item.slug %}" ><i
-                                                            class="far fa-eye" ></i ></button >
-                                                </div >
                                             </div >
                                         </div >
+                                        {#                                        <div class="col-6 col-md-4 col-lg-3 cartable" >#}
+                                        {#                                            <div class="product coffee" >#}
+                                        {#                                                <div class="product_images" >#}
+                                        {#                                                    <a class="product-img " href="{{ item.itemdetails.get_absolute_url }}" ><img#}
+                                        {#                                                            class="img-fluid product__image" src="{{ item.images.all.0.image.thumbnail.url }}"#}
+                                        {#                                                            alt="{{ item.images.all.0.image.url }}" ></a >#}
+                                        {#                                                </div >#}
+                                        {#                                                <h5 class="product-type" >{{ item.sub_category.category.category_name }}</h5 >#}
+                                        {#                                                <h3 class="product-name"#}
+                                        {#                                                    onclick="location.href='{{ item.itemdetails.get_absolute_url }}'" >{{ item.title }}</h3 >#}
+                                        {#                                                {% if item.itemdetails.discount_offer > 0 %}#}
+                                        {#                                                    <h3 class="product-price " ><small#}
+                                        {#                                                            style="font-size: small" >৳</small > {{ item.itemdetails.get_discounted_price }}#}
+                                        {#                                                        <del style="text-decoration: line-through;" >{{ item.price }}</del >#}
+                                        {#                                                    </h3 >#}
+                                        {#                                                {% else %}#}
+                                        {#                                                    <h3 class="product-price" ><small style="font-size: small" >৳</small > {{ item.price }}</h3 >#}
+                                        {#                                                {% endif %}#}
+                                        {#                                                <div class="openSidebar" >#}
+                                        {#                                                    <p hidden class="product__name" >{{ item.pk }}</p >#}
+                                        {#                                                    <p hidden class="product__title" >{{ item.title }}</p >#}
+                                        {#                                                    <p hidden class="product__price" >{{ item.itemdetails.get_discounted_price }}</p >#}
+                                        {#                                                    <button class="all_btn" data-action="ADD_TO_CART" name="btn{{ item.pk }}" >Add to cart</button >#}
+                                        {#                                                </div >#}
+                                        {#                                                <div class="product-select" >#}
+                                        {#                                                    <button class="add-to-wishlist round-icon-btn coffee" title="Add to Favorite" ><i#}
+                                        {#                                                            class="icon_heart_alt" ></i ></button >#}
+                                        {#                                                    <button class="round-icon-btn coffee quickviewbtn" id="quickviewbtn" title="Quick Details"#}
+                                        {#                                                            data-url="{% url 'shop:quick-view' item.slug %}" ><i#}
+                                        {#                                                            class="far fa-eye" ></i ></button >#}
+                                        {#                                                </div >#}
+                                        {#                                            </div >#}
+                                        {#                                        </div >#}
                                     {% endfor %}
 
 
@@ -403,7 +704,7 @@
                                                 {% if item.itemdetails.discount_offer > 0 %}
                                                     <h3 class="product-price" ><small
                                                             style="font-size: small" >৳</small > {{ item.itemdetails.get_discounted_price }}
-                                                        <del style="text-decoration: line-through;">{{ item.price }}</del >
+                                                        <del style="text-decoration: line-through;" >{{ item.price }}</del >
                                                     </h3 >
                                                 {% else %}
                                                     <h3 class="product-price" ><small style="font-size: small" >৳</small > {{ item.price }}</h3 >
@@ -470,7 +771,7 @@
                                                 {% if item.itemdetails.discount_offer > 0 %}
                                                     <h3 class="product-price" ><small
                                                             style="font-size: small" >৳</small > {{ item.itemdetails.get_discounted_price }}
-                                                        <del style="text-decoration: line-through;">{{ item.price }}</del >
+                                                        <del style="text-decoration: line-through;" >{{ item.price }}</del >
                                                     </h3 >
                                                 {% else %}
                                                     <h3 class="product-price" ><small style="font-size: small" >৳</small > {{ item.price }}</h3 >
@@ -577,7 +878,7 @@
                                                             {% if item.itemdetails.discount_offer > 0 %}
                                                                 <small style="font-size: small" >৳</small >
                                                                 {{ item.itemdetails.get_discounted_price }}
-                                                                <del style="text-decoration: line-through;">{{ item.price }}</del >
+                                                                <del style="text-decoration: line-through;" >{{ item.price }}</del >
 
                                                             {% else %}
                                                                 <small style="font-size: small" >৳</small > {{ item.price }}
@@ -600,7 +901,7 @@
                                                             {% if item.itemdetails.discount_offer > 0 %}
                                                                 <small style="font-size: small" >৳</small >
                                                                 {{ item.itemdetails.get_discounted_price }}
-                                                                <del style="text-decoration: line-through;">{{ item.price }}</del >
+                                                                <del style="text-decoration: line-through;" >{{ item.price }}</del >
 
                                                             {% else %}
                                                                 <small style="font-size: small" >৳</small > {{ item.price }}
@@ -623,7 +924,7 @@
                                                             {% if item.itemdetails.discount_offer > 0 %}
                                                                 <small style="font-size: small" >৳</small >
                                                                 {{ item.itemdetails.get_discounted_price }}
-                                                                <del style="text-decoration: line-through;">{{ item.price }}</del >
+                                                                <del style="text-decoration: line-through;" >{{ item.price }}</del >
 
                                                             {% else %}
                                                                 <small style="font-size: small" >৳</small > {{ item.price }}
@@ -657,7 +958,7 @@
                                                                 {% if item.itemdetails.discount_offer > 0 %}
                                                                     <small style="font-size: small" >৳</small >
                                                                     {{ item.itemdetails.get_discounted_price }}
-                                                                    <del style="text-decoration: line-through;">{{ item.price }}</del >
+                                                                    <del style="text-decoration: line-through;" >{{ item.price }}</del >
 
                                                                 {% else %}
                                                                     <small style="font-size: small" >৳</small > {{ item.price }}
@@ -768,7 +1069,7 @@
                                                                 {% if item.itemdetails.discount_offer > 0 %}
                                                                     <small style="font-size: small" >৳</small >
                                                                     {{ item.itemdetails.get_discounted_price }}
-                                                                    <del style="text-decoration: line-through;">{{ item.price }}</del >
+                                                                    <del style="text-decoration: line-through;" >{{ item.price }}</del >
 
                                                                 {% else %}
                                                                     <small style="font-size: small" >৳</small > {{ item.price }}
@@ -984,6 +1285,41 @@
         $(document).ready(function () {
             document.getElementById('floatcart').style.display = 'block'
         })
+    </script >
+    {#    <script src="{% static 'assets/js/slider_js/jquery-3.5.1.slim.min.js' %}"></script>#}
+    {#    <script src="{% static 'assets/js/slider_js/popper.min.js' %}"></script>#}
+    {#    <script src="{% static 'assets/js/slider_js/bootstrap.min.js' %}"></script>#}
+    {#    <script src="{% static 'assets/js/slider_js/slick.min.js' %}"></script>#}
+    {#    <script src="{% static 'assets/js/slider_js/main.js' %}"></script>#}
+    <script >
+        $('.main_home_banner').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 2000,
+            autoplaySpeed: 3000,
+
+            fade: true,
+            autoplay: true,
+            cssEase: 'linear',
+        });
+
+        if ($('.slick-slide').hasClass('slick-active')) {
+            $('.caption').addClass(' animate__animated animate__bounceInUp');
+            $('.animate_add').addClass('animate__animated animate__bounceInUp');
+        } else {
+            $('.caption').removeClass('animated fadeInLeft');
+            $('.animate_add').removeClass('animate__animated animate__bounceInUp');
+        }
+
+        $('.main_home_banner').on('beforeChange', function () {
+            $('.caption').removeClass('animate__animated animate__bounceInUp').hide();
+            $('.animate_add').removeClass('animate__animated animate__bounceInUp').hide();
+            setTimeout(() => {
+                $('.caption').addClass('animate__animated animate__bounceInUp').show();
+                $('.animate_add').addClass('animate__animated animate__bounceInUp').show();
+            }, 1000);
+        });
     </script >
     </body >
     <!-- Mirrored from afinda.vn/html/Ogami/homepage05.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jun 2020 12:00:51 GMT -->

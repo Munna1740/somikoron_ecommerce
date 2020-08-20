@@ -1,0 +1,174 @@
+{% extends 'shop/nav_footer.html' %}
+{% block body %}
+    {% load cart_template_tags %}
+    {% load  static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="css/custom_bootstrap.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/fontawesome.css" />
+    <link rel="stylesheet" href="css/adjusted_style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section
+      class="antu_form_section"
+      style="background: url({%  static 'assets/images/custom_slider_images/Shopping_Bag.png' %})"
+    >
+      <div class="form_main_body_antu">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-12"></div>
+            <div class="col-md-8 text-center">
+              <div class="inner_form_body_antu">
+                <div class="custom_form_header_antu text-center">
+                  <h2>Somikoron Monthly Shopping</h2>
+                </div>
+                <form action="/place_monthly_order/", method="post">{% csrf_token %}
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="custom_input_antu">
+                        <div class="form-group">
+                          <input
+                            name = "c_phone"
+                            type="text"
+                            class="form-control custom_form_control_antu"
+                            id=""
+                            placeholder="Phone Number"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="custom_input_antu">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            name = "c_name"
+                            class="form-control custom_form_control_antu"
+                            id=""
+                            placeholder="Name"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                      <div class="col-md-3">
+                      <div class="custom_input_antu">
+                        <div class="form-group">
+                          <input
+                            name = "c_area"
+                            type="text"
+                            class="form-control custom_form_control_antu"
+                            id=""
+                            placeholder="Area" required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-9">
+                      <div class="custom_input_antu">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            name = "c_address"
+                            class="form-control custom_form_control_antu"
+                            id=""
+                            placeholder="Full Address"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <textarea
+                          class="form-control custom_form_control_antu"
+                          id=""
+                          name = "order_list"
+                          rows="3"
+                          placeholder="Item lists..."
+                          required
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-6 text-left" style=" padding-top: 15px; !important;" >
+                      <div class="custom_input_antu">
+                        <div class="row">
+                            <div class="col-md-3 col-3">
+                            <div class="form-check">
+                              Payment:
+                            </div>
+                          </div>
+                          <div class="col-md-3 col-3">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="m_payment"
+                                id="exampleRadios1"
+                                value="bkash"
+                                checked
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleRadios1"
+                              >
+                                bKash
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-6">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="m_payment"
+                                id="exampleRadios2"
+                                value="cash_on"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleRadios2"
+                              >
+                                Kash on Delivery
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                      <div class="col-6">
+                      <button type="submit" class="no-round-btn btn-block">
+                        PLACE ORDER
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="jquery/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+{% endblock %}

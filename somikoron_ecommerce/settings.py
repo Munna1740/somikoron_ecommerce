@@ -65,7 +65,7 @@ INSTALLED_APPS = [
     'orders',
 ]
 
-SITE_ID = 2
+SITE_ID = 3
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -200,8 +200,8 @@ SOCIALACCOUNT_PROVIDERS = \
           'VERIFIED_EMAIL': False,
           'VERSION'       : 'v7.0'}}
 # facebook
-# SOCIAL_AUTH_FACEBOOK_KEY = '629271397680203'  # App ID
-# SOCIAL_AUTH_FACEBOOK_SECRET = 'e4a51b5b5c3e919ec82a2fdb5840a675'  # app key
+SOCIAL_AUTH_FACEBOOK_KEY = '875295476329648'  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '7904dbc8149ec875329da6d611fbb49a'  # app key
 ACCOUNT_LOGOUT_ON_GET = True
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 TIME_ZONE = "Asia/Dhaka"

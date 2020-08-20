@@ -26,4 +26,7 @@ urlpatterns = [
     path('place-order/', views.plcae_order, name='place-order'),
     path('delivery-status/', views.delivery_status, name='delivery-status'),
     path('user_login/', views.user_login, name='user_login'),
+    path('monthly_shopping/', views.monthly_shopping, name='monthly_shopping'),
+    path('place_monthly_order/', views.place_monthly_order, name='place_monthly_order'),
+    path('monthly_order_invoice/<orderid>', views.monthly_order_invoice,name='order-monthly_order_invoice'),
 ]
