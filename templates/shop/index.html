@@ -1,6 +1,7 @@
 {% extends 'shop/nav_footer.html' %}
 {% block body %}
     {% load cart_template_tags %}
+    {% load mathfilters %}
     {% load  static %}
     <!DOCTYPE html>
     <html lang="en" >
@@ -569,8 +570,13 @@
                                                 </div >
                                                 <!-- ================================ offer part start =========================== -->
                                                 <div class="offer" >
-                                                    <p ><span >30%</span ></p >
-                                                    <div id="circles" ></div >
+                                                    {% if item.itemdetails.discount_offer >= 1 %}
+                                                        <p ><span >৳{{ item.itemdetails.discount_offer|stringformat:".0f" }} OFF</span ></p >
+                                                        <div id="circles" ></div >
+                                                    {% else %}
+                                                        <p ><span >{{ item.itemdetails.discount_offer|mul:100|stringformat:".0f" }}% OFF</span ></p >
+                                                        <div id="circles" ></div >
+                                                    {% endif %}
                                                 </div >
                                                 <!-- ================================ offer part end =========================== -->
                                                 <div class="product_images" >
