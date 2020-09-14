@@ -80,11 +80,11 @@ ROOT_URLCONF = 'somikoron_ecommerce.urls'
 
 TEMPLATES = [
     {
-        'BACKEND' : 'django.template.backends.django.DjangoTemplates',
-        'DIRS'    : [os.path.join(BASE_DIR, 'templates')]
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')]
         ,
         'APP_DIRS': True,
-        'OPTIONS' : {
+        'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
@@ -108,14 +108,21 @@ DATABASES = {
         # 'PASSWORD': '1234',
         # 'HOST'    : '127.0.0.1',
         # 'PORT'    : '5432',
-        'TEST_CHARSET'  : "utf8",
-        'TEST_COLLATION': "utf8_general_ci",
-        'ENGINE'        : 'django.db.backends.sqlite3',
-        'NAME'          : os.path.join(BASE_DIR, 'db.sqlite3'),
-        'HOST'          : '',
-        'PORT'          : '',
-        'USER'          : '',
-        'PASSWORD'      : '',
+        # 'TEST_CHARSET': "utf8",
+        # 'TEST_COLLATION': "utf8_general_ci",
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'HOST': '',
+        # 'PORT': '',
+        # 'USER': '',
+        # 'PASSWORD': '',
+
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'somikorondb',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': '',
     }
 }
 
@@ -180,10 +187,10 @@ LOGIN_REDIRECT_URL = "/"
 
 SOCIALACCOUNT_PROVIDERS = \
     {'facebook':
-         {'METHOD'        : 'oauth2',
-          'SCOPE'         : ['email', 'public_profile', 'user_friends'],
-          'AUTH_PARAMS'   : {'auth_type': 'reauthenticate'},
-          'FIELDS'        : [
+         {'METHOD': 'oauth2',
+          'SCOPE': ['email', 'public_profile', 'user_friends'],
+          'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+          'FIELDS': [
               'id',
               'email',
               'name',
@@ -196,9 +203,9 @@ SOCIALACCOUNT_PROVIDERS = \
               'gender',
               'updated_time'],
           'EXCHANGE_TOKEN': True,
-          'LOCALE_FUNC'   : lambda request: 'kr_KR',
+          'LOCALE_FUNC': lambda request: 'kr_KR',
           'VERIFIED_EMAIL': False,
-          'VERSION'       : 'v7.0'}}
+          'VERSION': 'v7.0'}}
 # facebook
 SOCIAL_AUTH_FACEBOOK_KEY = '875295476329648'  # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = '7904dbc8149ec875329da6d611fbb49a'  # app key

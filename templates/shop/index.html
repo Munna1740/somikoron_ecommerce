@@ -240,164 +240,7 @@
                 </div >
             </div >
         </section >
-        <header class="coffee-2" >
-            <div class="navigation-filter" >
-                <div class="container" >
-                    <div class="row" >
-                        <div class="col-12 col-md-4 col-lg-4 col-xl-3 order-2 order-md-1" >
-                            <div class="department-menu_block down" >
-                                <div class="department-menu d-flex justify-content-between align-items-center" style="height: 50px" ><i
-                                        class="fas fa-bars" ></i >All
-                                                                  departments<span ><i
-                                            class="arrow_carrot-up" ></i ></span ></div >
-                                <div class="department-dropdown-menu down" >
-                                    <ul style="height: 460px" class="department_ul" >
-                                        <!-- Nested div for requirement -->
-                                        <div class="vertical-nav" >
-                                            {% for cat in categories %}
-                                                <li ><a href="{{ cat.get_absolute_url }}" ><i >
-                                                    <img style="width: 25px" src="{% static 'assets/images/custom_icons/' %}{{ cat.category_id }}.png"
-                                                         alt="" >
-                                                </i >{{ cat.category_name }}</a >
-                                                    {% if cat.subcategory_set.count > 0 and cat.category_name not in  cat.subcategory_set.all.0.sub_category_name %}
-                                                        <i class="fa fa-chevron-right float-right" aria-hidden="true" ></i >
-                                                        <ul class="sub-menu" >
-                                                            {% for subcat in cat.subcategory_set.all %}
-                                                                <li ><a href="{{ subcat.get_absolute_url }}" >
-                                                                    <i >
-                                                                        <img STYLE="width: 20px" src="
 
-
-
-
-                                                                                {% static 'assets/images/custom_icons/flatIcon/' %}{{ cat.category_id }}.png"
-                                                                             alt="" >
-                                                                    </i >{{ subcat.sub_category_name }}</a ></li >
-                                                            {% endfor %}
-                                                        </ul >
-                                                    {% endif %}
-                                                </li >
-                                            {% endfor %}
-                                        </div >
-                                    </ul >
-                                </div >
-                            </div >
-                        </div >
-                        <div class="col-12 col-md-8 col-lg-8 col-xl-8 order-1 order-md-1" >
-                            {#                            <div class="banner_v3" >#}
-                            {#                                <div class="container" >#}
-                            {#                                    <div class="row" >#}
-                            {#                                        <div class="col-12 col-xl-12" >#}
-                            {#                                            <main class="main" >#}
-                            {#                                                <style >#}
-                            {#                                                    * {#}
-                            {#                                                        margin: 0;#}
-                            {#                                                        padding: 0;#}
-                            {#                                                        box-sizing: border-box;#}
-                            {#                                                        list-style: none;#}
-                            {#                                                        text-decoration: none;#}
-                            {#                                                    }#}
-                            {##}
-                            {##}
-                            {#                                                    .container {#}
-                            {#                                                        max-width: 75rem;#}
-                            {#                                                        width: 100%;#}
-                            {#                                                        margin: 0 auto;#}
-                            {#                                                    }#}
-                            {##}
-                            {#                                                    .main .container .swiper-container .swiper-wrapper .swiper-slide .card-image {#}
-                            {#                                                        background: #ffffff;#}
-                            {#                                                        border: none;#}
-                            {#                                                        outline: none;#}
-                            {#                                                        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);#}
-                            {#                                                        border-radius: 2px;#}
-                            {#                                                    }#}
-                            {##}
-                            {#                                                    .main .container .swiper-container .swiper-wrapper .swiper-slide .card-image img {#}
-                            {#                                                        display: block;#}
-                            {#                                                        position: relative;#}
-                            {#                                                        left: 0;#}
-                            {#                                                        bottom: 0;#}
-                            {#                                                        width: 100%;#}
-                            {#                                                        height: auto;#}
-                            {#                                                        -o-object-fit: cover;#}
-                            {#                                                        object-fit: cover;#}
-                            {#                                                    }#}
-                            {##}
-                            {#                                                    .main .container .swiper-container .swiper-pagination-bullet {#}
-                            {#                                                        opacity: 0.8;#}
-                            {#                                                        background: #333333;#}
-                            {#                                                    }#}
-                            {##}
-                            {#                                                    .main .container .swiper-container .swiper-pagination-bullet-active {#}
-                            {#                                                        background: #ffffff;#}
-                            {#                                                    }#}
-                            {##}
-                            {#                                                    .main .container .swiper-container .swiper-button-next,#}
-                            {#                                                    .main .container .swiper-container .swiper-button-prev {#}
-                            {#                                                        background-image: none;#}
-                            {#                                                        background-size: 0;#}
-                            {#                                                        background-repeat: no-repeat;#}
-                            {#                                                        background-position: 0;#}
-                            {#                                                        margin-top: -1rem;#}
-                            {#                                                    }#}
-                            {##}
-                            {#                                                    .main .container .swiper-container .swiper-button-next .arrow-icon,#}
-                            {#                                                    .main .container .swiper-container .swiper-button-prev .arrow-icon {#}
-                            {#                                                        font-size: 2rem;#}
-                            {#                                                        color: #ffffff;#}
-                            {#                                                    }#}
-                            {#                                                </style >#}
-                            {#                                                <div class="container" >#}
-                            {#                                                    <div class="swiper-container" >#}
-                            {#                                                        <div class="swiper-wrapper" >#}
-                            {#                                                            <div class="swiper-slide" >#}
-                            {#                                                                <div class="card-image" >#}
-                            {#                                                                    <img src="{% static 'assets/images/banner/hBanner2.jpg' %}" loading="lazy"#}
-                            {#                                                                         alt="Image Slider" >#}
-                            {#                                                                </div >#}
-                            {#                                                            </div >#}
-                            {#                                                            <div class="swiper-slide" >#}
-                            {#                                                                <div class="card-image" >#}
-                            {#                                                                    <img src="{% static 'assets/images/banner/hBanner3.jpg' %}" loading="lazy"#}
-                            {#                                                                         alt="Image Slider" >#}
-                            {#                                                                </div >#}
-                            {#                                                            </div >#}
-                            {#                                                            <div class="swiper-slide" >#}
-                            {#                                                                <div class="card-image" >#}
-                            {#                                                                    <img src="{% static 'assets/images/banner/hBanner1.jpg' %}" loading="lazy"#}
-                            {#                                                                         alt="Image Slider" >#}
-                            {#                                                                </div >#}
-                            {#                                                            </div >#}
-                            {#                                                            <!--<div class="swiper-slide" >-->#}
-                            {#                                                            <!--    <div class="card-image" >-->#}
-                            {#                                                            <!--        <img src="{% static 'assets/images/banner/hBanner4.jpg' %}" loading="lazy"-->#}
-                            {#                                                            <!--             alt="Image Slider" >-->#}
-                            {#                                                            <!--    </div >-->#}
-                            {#                                                            <!--</div >-->#}
-                            {#                                                        </div >#}
-                            {#                                                        <!-- Add Pagination -->#}
-                            {#                                                        <div class="swiper-pagination" ></div >#}
-                            {#                                                        <!-- Add Scrollbar -->#}
-                            {#                                                        <div class="swiper-button-next" >#}
-                            {#                                                            <i class="fas fa-chevron-circle-right arrow-icon" ></i >#}
-                            {#                                                        </div >#}
-                            {#                                                        <div class="swiper-button-prev" >#}
-                            {#                                                            <i class="fas fa-chevron-circle-left arrow-icon" ></i >#}
-                            {#                                                        </div >#}
-                            {#                                                    </div >#}
-                            {#                                                </div >#}
-                            {#                                            </main >#}
-                            {#                                        </div >#}
-                            {#                                    </div >#}
-                            {#                                </div >#}
-                            {#                            </div >#}
-                            <!-- End banner v3-->
-                        </div >
-                    </div >
-                </div >
-            </div >
-        </header >
         <!-- End banner v3-->
         <div class="benefit-block" >
             <div class="container" >
@@ -432,58 +275,32 @@
             </div >
         </div >
         <!-- End benefit block-->
+
         <div class="banner-group" >
             <div class="container" >
                 <div class="row" >
-                    <div class="col-12 col-md-8" >
-                        <div class="large-banner" style="background-image: url({% static 'assets/images/homepage05/banner_group_bg_2.png' %});" >
-                            <div class="row d-flex align-items-center justify-content-center" >
-                                <div class="col-10 col-sm-5 col-md-6" >
-                                    <div class="banner-img text-center" onclick="location.href='{% url 'shop:category-items' catid='food' %}'" ><img
-                                            class="img-fluid"
-                                            src="{% static 'assets/images/banner/Grocessary.png' %}"
-                                            alt="large banner" ></div >
-                                </div >
-                                <div class="col-10 col-sm-6 col-md-6" >
-                                    <div class="banner-text text-center text-sm-left" >
-                                        <h3 >Find All <span >Grocery </span ><br > Items in One Place </h3 >
-                                    </div >
-                                </div >
-                            </div >
-                        </div >
+                    <div class="col-12 col-md-4" >
+                        <div class="small-banner" style="background-image: url({% static 'assets/images/homepage05/banner_group_bg_4.png' %});"
+                             onclick="location.href='{% url 'shop:category-items' catid='covid19' %}'" ><img
+                                src="{% static 'assets/images/banner/covid.png' %}" alt="small banner" ></div >
                     </div >
                     <div class="col-12 col-md-4" >
-                        <div class="small-banner" style="background-image: url({% static 'assets/images/homepage05/banner_group_bg_1.png' %});"
+                        <div class="small-banner" style="background-image: url({% static 'assets/images/homepage05/banner_group_bg_3.png' %});"
+                              onclick="location.href='{% url 'shop:category-items' catid='food' %}'" ><img
+                                src="{% static 'assets/images/banner/Grocessary.png' %}" alt="small banner" ></div >
+                    </div >
+                    <div class="col-12 col-md-4" >
+                        <div class="small-banner" style="background-image: url({% static 'assets/images/homepage05/banner_group_bg_2.png' %});"
                              onclick="location.href='{% url 'shop:category-items' catid='somikoron' %}'" ><img
                                 src="{% static 'assets/images/banner/roshmalai.png' %}" alt="small banner" ></div >
                     </div >
-                    <div class="col-12 col-md-4" >
-                        <div class="small-banner" style="background-image: url({% static 'assets/images/homepage05/banner_group_bg_4.png' %});"
-                             onclick="location.href='{% url 'shop:category-items' catid='cattle' %}'" ><img
-                                src="{% static 'assets/images/banner/cow.png' %}" alt="small banner" ></div >
-                    </div >
-                    <div class="col-12 col-md-8" >
-                        <div class="large-banner" style="background-image: url({% static 'assets/images/homepage05/banner_group_bg_3.png' %});" >
-                            <div class="row d-flex align-items-center justify-content-center" >
-                                <div class="col-10 col-sm-5 col-md-6" >
-                                    <div class="banner-img text-center" onclick="location.href='{% url 'shop:category-items' catid='covid19' %}'" >
-                                        <img class="img-fluid"
-                                             src="{% static 'assets/images/banner/covid.png' %}"
-                                             alt="large banner" ></div >
-                                </div >
-                                <div class="col-10 col-sm-6 col-md-6" >
-                                    <div class="banner-text text-center text-sm-left" >
-                                        <h3 >Exclusive Discount on<br ><span >COVID-19 </span > Products</h3 >
-                                    </div >
-                                </div >
-                            </div >
-                        </div >
-                    </div >
+
+
                 </div >
             </div >
         </div >
         <!-- End banner group-->
-        <section class="category" >
+        <section class="category cat-grid" >
             <div class="container" >
                 <div class="row justify-content-center py-5" >
                     <div class="col-lg-6 col-md-6 text-center" >
@@ -529,7 +346,7 @@
                                 <li ><a href="#tab-3" >Popular Products</a ></li >
                             </ul >
                             <div id="tab-1" >
-                                <div class="row no-gutters-sm " >
+                                <div class="row no-gutters-sm product_row" >
                                     {% for item in offer|slice:":12" %}
                                         <div class="col-md-3 col-lg-3 cartable" >
                                             <div class="product coffee" >
@@ -565,7 +382,9 @@
                                                         </ul >
                                                     </div >
                                                     <div class="view_details" >
-                                                        <button class="btn-block btn_details" >view details</button >
+                                                            <button class=" no-round-btn coffee btn_details float-left" >view details</button >
+                                                            <button class=" no-round-btn coffee btn_details float-right" >view details</button >
+
                                                     </div >
                                                 </div >
                                                 <!-- ================================ offer part start =========================== -->
@@ -661,6 +480,7 @@
                                         {#                                                </div >#}
                                         {#                                            </div >#}
                                         {#                                        </div >#}
+
                                     {% endfor %}
 
 

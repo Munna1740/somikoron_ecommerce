@@ -1,14 +1,14 @@
 {% load static %}
 <!--{% load cart_template_tags %}-->
-<html lang="en" >
-<head >
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <meta name="keywords"
-          content="blog, business, clean, clear, cooporate, creative, design web, flat, marketing, minimal, portfolio, shop, shopping, unique" >
-    <meta name="author" content="MARTECH | Deer Creative Theme" >
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="{% static 'assets/images/custom_icons/fav.ico' %}" >
+          content="blog, business, clean, clear, cooporate, creative, design web, flat, marketing, minimal, portfolio, shop, shopping, unique">
+    <meta name="author" content="MARTECH | Deer Creative Theme">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" href="{% static 'assets/images/custom_icons/fav.ico' %}">
     {#MDB#}
     <!-- Font Awesome -->
     {#    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" >#}
@@ -19,31 +19,31 @@
     <!-- Material Design Bootstrap -->
     {#    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" >#}
     {#  slider #}
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css' >
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' >
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
     {#    <link rel="stylesheet" href="{% static 'assets/css/slider_style.css' %}" >#}
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" >
-    <link rel="stylesheet" href="{% static 'assets/css/adjusted_style.css' %}" >
-    <link rel="stylesheet" href="{% static 'assets/css/custom_bootstrap.css' %}" >
-    <link rel="stylesheet" href="{% static 'assets/css/normalize.css' %}" >
-    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}" >
-    <link rel="stylesheet" href="{% static 'assets/css/elegant.css' %}" >
-    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" >
-    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}" >
-    <link rel="stylesheet" href="{% static 'assets/css/slick-theme.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/css/scroll.css' %}" >
-    <link rel="stylesheet" href="{% static 'assets/css/icomoon.css' %}" >
-    <link rel="stylesheet" href="{% static 'assets/css/jquery.fancybox.min.css' %}" >
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/adjusted_style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/custom_bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/elegant.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick-theme.css' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/scroll.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/jquery.fancybox.min.css' %}">
     {#    <link rel="shortcut icon" href="{% static 'assets/images/shortcut_logo.png' %}" >#}
     {#    <link rel="stylesheet" href="{% static 'assets/css/adjusted_style.css' %}" >#}
-    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" >
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
     {#    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"#}
     {#          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" >#}
-    <title >{% block head_title %}{% endblock %}</title >
+    <title>{% block head_title %}{% endblock %}</title>
     {% block extra_head %}
     {% endblock %}
 
-    <style >
+    <style>
         a {
             text-decoration: none !important;
         }
@@ -51,130 +51,135 @@
         .product .product-name {
             font-size: 16px;
         }
-    </style >
-</head >
-<body >
+    </style>
+</head>
+<body>
 {#slider#}
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 {#<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script >#}
-<script src="{% static 'assets/js/jquery_updated/jquery.min.js' %}" ></script >
+<script src="{% static 'assets/js/jquery_updated/jquery.min.js' %}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" ></script >
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
 {#<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"#}
 {#        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" ></script >#}
-<script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}" ></script >
-<script src="{% static 'assets/js/jquery-ui.min.js' %}" ></script >
-<script src="{% static 'assets/js/jquery.countdown.min.js' %}" ></script >
+<script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.countdown.min.js' %}"></script>
 
-<script src="{% static 'assets/js/jquery.easing.js' %}" ></script >
-<script src="{% static 'assets/js/jquery.scrollUp.min.js' %}" ></script >
-<script src="{% static 'assets/js/jquery.zoom.min.js' %}" ></script >
-<script src="{% static 'assets/js/parallax.js' %}" ></script >
-<script src="{% static 'assets/js/jquery.fancybox.js' %}" ></script >
-<script src="{% static 'assets/js/numscroller-1.0.js' %}" ></script >
-<script src="{% static 'assets/js/vanilla-tilt.min.js' %}" ></script >
-<script src="{% static 'assets/js/slick.min.js' %}" ></script >
-<script src="{% static 'assets/js/main.js' %}" ></script >
-<script src="{% static 'assets/js/mobile-menu-listener.js' %}" ></script >
-<script src="{% static 'assets/js/sample_slider.js' %}" ></script >
+<script src="{% static 'assets/js/jquery.easing.js' %}"></script>
+<script src="{% static 'assets/js/jquery.scrollUp.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.zoom.min.js' %}"></script>
+<script src="{% static 'assets/js/parallax.js' %}"></script>
+<script src="{% static 'assets/js/jquery.fancybox.js' %}"></script>
+<script src="{% static 'assets/js/numscroller-1.0.js' %}"></script>
+<script src="{% static 'assets/js/vanilla-tilt.min.js' %}"></script>
+<script src="{% static 'assets/js/slick.min.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+<script src="{% static 'assets/js/mobile-menu-listener.js' %}"></script>
+<script src="{% static 'assets/js/sample_slider.js' %}"></script>
 {#<script src="{% static 'assets/js/cart_js.js' %}" ></script >#}
 <!-- ManyChat -->
 {#<script src="//widget.manychat.com/114667473628110.js" async="async" ></script >#}
-{% block nav %}
-{% endblock %}
+
 
 {% if messages %}
-    <script >
+    <script>
         $(document).ready(function () {
             $(".toast").toast({delay: 2500});
             $(".toast").toast('show');
         });
-    </script >
+    </script>
     {% for message in messages %}
-        <div aria-live="polite" class="d-flex justify-content-center align-items-center" >
-            <div class="toast " role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 75;  z-index: 999" >
-                <div class="toast-header bg-{{ message.tags }}" style="color: white" >
-                    <strong class="mr-auto" >ALERT</strong >
-                    <small >just now</small >
-                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" >
-                        <span aria-hidden="true" >&times;</span >
-                    </button >
-                </div >
-                <div class="toast-body" >
+        <div aria-live="polite" class="d-flex justify-content-center align-items-center">
+            <div class="toast " role="alert" aria-live="assertive" aria-atomic="true"
+                 style="position: absolute; top: 75;  z-index: 999">
+                <div class="toast-header bg-{{ message.tags }}" style="color: white">
+                    <strong class="mr-auto">ALERT</strong>
+                    <small>just now</small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
                     {{ message }}
-                </div >
-            </div >
-        </div >
+                </div>
+            </div>
+        </div>
     {% endfor %}
 {% endif %}
 {% block qwuickcart %}
-    <div class="asd" id="floatcartdiv" >
+    <div class="asd" id="floatcartdiv">
         <!-- =================================== Float Part start====================== -->
-        <div class="float_cart" id="floatcart" onclick="sidebarOPen()" >
-            <div class="float_content" style="background-color: rgb(203, 36, 27)" >
-                <div class="float_icon" >
-                    <h5 style="color: white" ><i class="fa fa-shopping-cart" aria-hidden="true" ></i >
-                    </h5 >
-                </div >
-                <h6 style="color: white; margin-top: -10px; font-size: 12px" ><span id="floatingtotalitems" >0</span > Items</h6 >
+        <div class="float_cart" id="floatcart" onclick="sidebarOPen()">
+            <div class="float_content" style="background-color: rgb(203, 36, 27)">
+                <div class="float_icon">
+                    <h5 style="color: white"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </h5>
+                </div>
+                <h6 style="color: white; margin-top: -10px; font-size: 12px"><span id="floatingtotalitems">0</span>
+                    Items</h6>
                 {#                {{ request.user|cart_item_count }}#}
-            </div >
-            <div class="float_price" style="background-color: rgb(253,240,177)" >
-                <h6 ><span >৳</span ><span style="font-size: 13px" id="floatcarttotal" >0</span ></h6 >
+            </div>
+            <div class="float_price" style="background-color: rgb(253,240,177)">
+                <h6><span>৳</span><span style="font-size: 13px" id="floatcarttotal">0</span></h6>
                 {#                {{ request.user|cart_total_count|stringformat:".0f" }}#}
-            </div >
-        </div >
+            </div>
+        </div>
         <!-- =================================== Float Part End ====================== -->
         <!-- =================================== Sidebar  Part start====================== -->
-        <div id="add_cart_sidebar" class="px-1" style="margin-top: 57px; " >
-            <div class="closeSidebar" onclick="closeSidebar()" style="vertical-align: middle" >Close</i>
-            </div >
-            <div class="specialCode" >
-                <button class="special_code" onclick="clickCode()" > <span ><i class="fa fa-chevron-circle-up" aria-hidden="true" ></i >
-               </span > Have a special code?
-                </button >
-                <div class="token_form px-2" id="hiddenform" >
-                    <form >
-                        <div class="row justify-content-center text-center px-2" >
-                            <div class="col-md-8 col-sm-8 py-2" >
-                                <input type="text" class="form-control token_input" id="exampleInputEmail1" placeholder="Enter code" >
-                            </div >
-                            <div class="col-md-4 col-sm-4 text-center py-2" >
-                                <button type="submit" class="btn bt-block  tokent_btn" >Go</button >
-                            </div >
-                        </div >
-                    </form >
-                </div >
-                <div class="place_order" >
-                    <div class="po_btn" >
-                        <button style="font-size: 15px" class="bt-block pl_btn " id="placeorderbtn" >Place order</button >
-                    </div >
-                    <div class="po_btn" >
-                        <button class=" pr_btn" style="font-size: 15px" id="cart_total" >0</button >
-                    </div >
-                </div >
-            </div >
+        <div id="add_cart_sidebar" class="px-1" style="margin-top: 57px; ">
+            <div class="closeSidebar" onclick="closeSidebar()" style="vertical-align: middle">Close</i>
+            </div>
+            <div class="specialCode">
+                <button class="special_code" onclick="clickCode()"> <span><i class="fa fa-chevron-circle-up"
+                                                                             aria-hidden="true"></i>
+               </span> Have a special code?
+                </button>
+                <div class="token_form px-2" id="hiddenform">
+                    <form>
+                        <div class="row justify-content-center text-center px-2">
+                            <div class="col-md-8 col-sm-8 py-2">
+                                <input type="text" class="form-control token_input" id="exampleInputEmail1"
+                                       placeholder="Enter code">
+                            </div>
+                            <div class="col-md-4 col-sm-4 text-center py-2">
+                                <button type="submit" class="btn bt-block  tokent_btn">Go</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="place_order">
+                    <div class="po_btn">
+                        <button style="font-size: 15px" class="bt-block pl_btn " id="placeorderbtn">Place order</button>
+                    </div>
+                    <div class="po_btn">
+                        <button class=" pr_btn" style="font-size: 15px" id="cart_total">0</button>
+                    </div>
+                </div>
+            </div>
             <!-- ===================================== Sidebar Inner row Start=============================== -->
-            <div class="row justify-content-center text-center" >
-                <div class="col-md-12" >
-                    <div class="header_selected_product text-left" >
-                        <h3 style="font-size: 13px; padding-left: 18px" ><i class="fa fa-shopping-cart"
-                                                                            aria-hidden="true" ></i ><span id="cartheadingtotalitems" >0</span >
-                            Items Selected</h3 >
-                    </div >
-                </div >
-            </div >
-            <div class="row justify-content-center sidebar_row mb-1" >
-                <div class="col-md-12" >
-                    <div class="text-center " style="background-color: #ecd0d0; padding: 5px 10px" >
-                        <h6 style="color: #000000" >Delivery Charge ৳<span id="deliverycharge" style="" >60</span ></h6 >
-                    </div >
-                </div >
-            </div >
-            <div class="row justify-content-center sidebar_row mb-1" >
-                <div class="col-md-12 col-sm-12 cart" style="overflow-y: scroll; height: 480px" >
-                    <table class="table table-borderless" id="carttable" style=" border-collapse: collapse;" >
-                        <tbody class="cart" >
+            <div class="row justify-content-center text-center">
+                <div class="col-md-12">
+                    <div class="header_selected_product text-left">
+                        <h3 style="font-size: 13px; padding-left: 18px"><i class="fa fa-shopping-cart"
+                                                                           aria-hidden="true"></i><span
+                                id="cartheadingtotalitems">0</span>
+                            Items Selected</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center sidebar_row mb-1">
+                <div class="col-md-12">
+                    <div class="text-center " style="background-color: #ecd0d0; padding: 5px 10px">
+                        <h6 style="color: #000000">Delivery Charge ৳<span id="deliverycharge" style="">60</span></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center sidebar_row mb-1">
+                <div class="col-md-12 col-sm-12 cart" style="overflow-y: scroll; height: 480px">
+                    <table class="table table-borderless" id="carttable" style=" border-collapse: collapse;">
+                        <tbody class="cart">
                         {#                        {% for item in cartitems.items.all %}#}
                         {#                            <tr style="width: 300px !important; " >#}
                         {#                                <td colspan="3" style=" padding-bottom: 0px; width: 300px !important;" >{{ item.item.title|truncatechars:28 }}#}
@@ -200,8 +205,8 @@
                         {#                                </th >#}
                         {#                            </tr >#}
                         {#                        {% endfor %}#}
-                        </tbody >
-                    </table >
+                        </tbody>
+                    </table>
                     {#                    {% for item in cartitems.items.all %}#}
                     {#                        <div class="row justify-content-center px-0  py-2" style="padding-left: 30px !important;" >#}
                     {#                            <div class="col-md-2" >#}
@@ -242,14 +247,14 @@
                     {#                            </div >#}
                     {#                        </div >#}
                     {#                    {% endfor %}#}
-                </div >
-            </div >
+                </div>
+            </div>
             <!-- ===================================== Sidebar Inner row End =============================== -->
-        </div >
+        </div>
         <!-- =================================== Sidebar  Part End ====================== -->
-    </div >
+    </div>
 
-    <script >
+    <script>
         $(document).ready(function () {
             'use strict';
 
@@ -668,32 +673,35 @@
                 console.log(e);
             }
         }
-    </script >
-<!-- Small modal -->
+    </script>
+    <!-- Small modal -->
     {#<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button>#}
 
 
 
-<!-- Modal -->
-    <div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-        <div class="modal-dialog modal-sm" role="document" >
-            <div class="modal-content" >
-                <div class="modal-header" >
-                    <h5 class="modal-title" id="exampleModalLabel" >Place Order</h5 >
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
-                        <span aria-hidden="true" >&times;</span >
-                    </button >
-                </div >
-                <div class="modal-body" >
-                    <p >Please login and try again...</p ><br ><br >
+    <!-- Modal -->
+    <div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Place Order</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Please login and try again...</p><br><br>
                     {#          <button type="button" class="btn btn-secondary" >Close</button>#}
-                    <button type="button" onclick="location.href='/user_login'" class=" no-round-btn btn-block" data-dismiss="modal" >LOGIN</button >
-                </div >
+                    <button type="button" onclick="location.href='/user_login'" class=" no-round-btn btn-block"
+                            data-dismiss="modal">LOGIN
+                    </button>
+                </div>
                 {#      <div class="modal-footer">#}
                 {#      </div>#}
-            </div >
-        </div >
-    </div >
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
 {#                           <!-- Trigger the modal with a button -->#}
@@ -748,143 +756,148 @@
 {#</script >#}
 <!-- =================================== Sidebar  Part End ====================== -->
 {% block quick_view %}
-<!-- Modal -->
-    <div class="modal fade" id="quickViewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document" >
-            <div class="modal-content" id="modalcontent" >
-                <div class="modal-header text-center" style="text-align: center; padding: 5px" >
-                    <div class="text-center text-center" style="float: left; width: 90% " >
-                        <h6 class="modal-title" id="exampleModalLongTitle" ></h6 >
-                    </div >
-                    <div style="float: right" >
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
-                            <span aria-hidden="true" >&times;</span >
-                        </button >
-                    </div >
-                </div >
-                <div class="modal-body" >
-                    <div class="shop-detail" >
-                        <div class="row" style="height: 530px;" >
-                            <div class="col-12 col-lg-6" >
-                                <div class="shop-detail_img" >
-                                    <button class="round-icon-btn" id="zoom-btn" ><i class="icon_zoom-in_alt" ></i ></button >
-                                    <div class="big-img" id='bi' >
+    <!-- Modal -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content" id="modalcontent">
+                <div class="modal-header text-center" style="text-align: center; padding: 5px">
+                    <div class="text-center text-center" style="float: left; width: 90% ">
+                        <h6 class="modal-title" id="exampleModalLongTitle"></h6>
+                    </div>
+                    <div style="float: right">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="shop-detail">
+                        <div class="row" style="height: 530px;">
+                            <div class="col-12 col-lg-6">
+                                <div class="shop-detail_img">
+                                    <button class="round-icon-btn" id="zoom-btn"><i class="icon_zoom-in_alt"></i>
+                                    </button>
+                                    <div class="big-img" id='bi'>
                                         {#                                    {% for  image in object.item.images.all %}#}
-                                        <div class="big-img_block " ><img class="makeempty" id="bi1" src=""
-                                                                          alt="product image" >
-                                        </div >
-                                        <div class="big-img_block " ><img class="makeempty" id="bi2" src=""
-                                                                          alt="product image" >
-                                        </div >
-                                        <div class="big-img_block " ><img class="makeempty" id="bi3" src=""
-                                                                          alt="product image" >
-                                        </div >
+                                        <div class="big-img_block "><img class="makeempty" id="bi1" src=""
+                                                                         alt="product image">
+                                        </div>
+                                        <div class="big-img_block "><img class="makeempty" id="bi2" src=""
+                                                                         alt="product image">
+                                        </div>
+                                        <div class="big-img_block "><img class="makeempty" id="bi3" src=""
+                                                                         alt="product image">
+                                        </div>
                                         {#                                    {% endfor %}#}
-                                    </div >
-                                    <div class="slide-img" id='si' >
+                                    </div>
+                                    <div class="slide-img" id='si'>
                                         {#                                    {% for  image in object.item.images.all %}#}
-                                        <div class="slide-img_block " ><img class="makeempty" id="si1" src=""
+                                        <div class="slide-img_block "><img class="makeempty" id="si1" src=""
                                         >
-                                        </div >
-                                        <div class="slide-img_block " ><img class="makeempty" id="si2" src=""
+                                        </div>
+                                        <div class="slide-img_block "><img class="makeempty" id="si2" src=""
                                         >
-                                        </div >
-                                        <div class="slide-img_block " ><img class="makeempty" id="si3" src=""
+                                        </div>
+                                        <div class="slide-img_block "><img class="makeempty" id="si3" src=""
                                         >
-                                        </div >
+                                        </div>
                                         {#                                    {% endfor %}#}
-                                    </div >
-                                </div >
-                                <div class="img_control" ></div >
-                            </div >
-                            <div class="col-12 col-lg-6" >
-                                <div class="shop-detail_info " >
+                                    </div>
+                                </div>
+                                <div class="img_control"></div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="shop-detail_info ">
                                     {#                                <h5 class="product-type color-type" >Oranges</h5 >#}
                                     {#                                <h2 class="product-name" >{{ object.item.title }}</h2 >#}
                                     {#                                <p class="product-describe" >{{ object.item.description|truncatewords:25 }} <a class="product-more"#}
                                     {#                                                                                                               href="#tab-1" >View more <i#}
                                     {#                                        class="arrow_carrot-2right" ></i ></a ></p >#}
-                                    <p class="delivery-status" id="deliverycharges" >Free delivery</p >
-                                    <div >
-                                        <p class="product-describe" >
-                                        <div id="cattledetails" style="display: none" >
-                                            <div >
-                                                <div style="float: left" >Breed:</div >
-                                                <div style="float: right" id="breed" ></div >
-                                            </div >
-                                            <br ><br >
-                                            <div >
-                                                <div style="float: left" >Height:</div >
-                                                <div style="float: right" id="height" ></div >
-                                            </div >
-                                            <br ><br >
-                                            <div >
-                                                <div style="float: left" >Live Weight:</div >
-                                                <div style="float: right" id="liveweight" ></div >
-                                            </div >
-                                            <br ><br >
-                                        </div >
-                                        <div id="productdetails" style="display: none" >
-                                            <div >
-                                                <div style="float: left" >Product:</div >
-                                                <div style="float: right" id="ptitle" ></div >
-                                            </div >
-                                            <br ><br >
-                                            <div >
-                                                <div style="float: left" >Code:</div >
-                                                <div style="float: right" id="pcode" ></div >
-                                            </div >
-                                            <br ><br >
-                                            <div >
-                                                <div style="float: left" >Additional Info:</div >
-                                                <div style="float: right" id="padditonalinfo" ></div >
-                                            </div >
-                                            <br ><br >
-                                        </div >
+                                    <p class="delivery-status" id="deliverycharges">Free delivery</p>
+                                    <div>
+                                        <p class="product-describe">
+                                        <div id="cattledetails" style="display: none">
+                                            <div>
+                                                <div style="float: left">Breed:</div>
+                                                <div style="float: right" id="breed"></div>
+                                            </div>
+                                            <br><br>
+                                            <div>
+                                                <div style="float: left">Height:</div>
+                                                <div style="float: right" id="height"></div>
+                                            </div>
+                                            <br><br>
+                                            <div>
+                                                <div style="float: left">Live Weight:</div>
+                                                <div style="float: right" id="liveweight"></div>
+                                            </div>
+                                            <br><br>
+                                        </div>
+                                        <div id="productdetails" style="display: none">
+                                            <div>
+                                                <div style="float: left">Product:</div>
+                                                <div style="float: right" id="ptitle"></div>
+                                            </div>
+                                            <br><br>
+                                            <div>
+                                                <div style="float: left">Code:</div>
+                                                <div style="float: right" id="pcode"></div>
+                                            </div>
+                                            <br><br>
+                                            <div>
+                                                <div style="float: left">Additional Info:</div>
+                                                <div style="float: right" id="padditonalinfo"></div>
+                                            </div>
+                                            <br><br>
+                                        </div>
                                         {#                                        <div >#}
                                         {#                                            <div style="float: left" >Expected Weight:</div >#}
                                         {#                                            <div id='dem' style="float: right" >{{ cattle.cattleinfo.expected_weight }}680 KG</div >#}
                                         {#                                        </div >#}
-                                        <br >
+                                        <br>
                                         </p >
-                                    </div >
-                                    <p style="font-size: 14px" id="pdescription" >
-                                    </p >
-                                    <div class="price-rate" >
-                                        <span class="product-price" >Tk</span >
-                                        <h3 class="product-price" style="margin-left: -15px !important;" id="newprice" >
-                                        </h3 >
-                                        <span id="oldprice" style="text-decoration: line-through;" ></span >
-                                        <br >
-                                        <h5 class="product-rated text-right" ><i class="icon_star" ></i ><i class="icon_star" ></i ><i
-                                                class="icon_star" ></i ><i class="icon_star" ></i ><i
-                                                class="icon_star-half" ></i ><span >(15)</span ></h5 >
-                                    </div >
+                                    </div>
+                                    <p style="font-size: 14px" id="pdescription">
+                                    </p>
+                                    <div class="price-rate">
+                                        <span class="product-price">Tk</span>
+                                        <h3 class="product-price" style="margin-left: -15px !important;" id="newprice">
+                                        </h3>
+                                        <span id="oldprice" style="text-decoration: line-through;"></span>
+                                        <br>
+                                        <h5 class="product-rated text-right"><i class="icon_star"></i><i
+                                                class="icon_star"></i><i
+                                                class="icon_star"></i><i class="icon_star"></i><i
+                                                class="icon_star-half"></i><span>(15)</span></h5>
+                                    </div>
                                     {#                                    <div class="color-select" >#}
                                     {#                                        <h5 >Select Color:</h5 ><a class="color bg-danger" href="#" ></a ><a class="color bg-success"#}
                                     {#                                                                                                             href="#" ></a ><a#}
                                     {#                                            class="color bg-info" href="#" ></a >#}
                                     {#                                    </div >#}
-                                    <div class="quantity-select" style="margin-bottom: 20px" >
-                                        <label for="quantity" >Quantity:</label >
-                                        <input disabled class="no-round-input" id="quantity" type="number" min="0" value="1" >{{ object.unit }}
-                                    </div >
-                                    <div class="product-select cartable" style="text-align: center" >
-                                        <img hidden src="" alt="Image" id="product__image" class="product__image" >
-                                        <p hidden class="product__name" id="product__name" ></p >
-                                        <p hidden class="product__title" id="product__title" ></p >
-                                        <p hidden class="product__price" id="product__price" ></p >
-                                        <button class="add-to-cart normal-btn outline" data-action="ADD_TO_CART" id="quickaddcartbtn"
-                                                style="width: 100%" >Add to Cart
-                                        </button >
+                                    <div class="quantity-select" style="margin-bottom: 20px">
+                                        <label for="quantity">Quantity:</label>
+                                        <input disabled class="no-round-input" id="quantity" type="number" min="0"
+                                               value="1">{{ object.unit }}
+                                    </div>
+                                    <div class="product-select cartable" style="text-align: center">
+                                        <img hidden src="" alt="Image" id="product__image" class="product__image">
+                                        <p hidden class="product__name" id="product__name"></p>
+                                        <p hidden class="product__title" id="product__title"></p>
+                                        <p hidden class="product__price" id="product__price"></p>
+                                        <button class="add-to-cart normal-btn outline" data-action="ADD_TO_CART"
+                                                id="quickaddcartbtn"
+                                                style="width: 100%">Add to Cart
+                                        </button>
                                         {#                                    <br ><a href="{{ object.item.get_remove_from_cart_url }}" > remove</a >#}
-                                    </div >
-                                </div >
-                            </div >
-                        </div >
-                    </div >
-                </div >
-                <div class="modal-footer" style="padding: 7px" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="padding: 7px">
                     {#                    <div class="product-share text-left" style="float: left; width: 85%" >#}
                     {#                        <span >Share link:</span >&nbsp; &nbsp;#}
                     {#                        <a href="#" ><i class="fab fa-facebook-f" > </i ></a >&nbsp;&nbsp;#}
@@ -892,14 +905,14 @@
                     {#                        <a href="#" ><i class="fab fa-invision" > </i ></a >&nbsp;&nbsp;#}
                     {#                        <a href="#" ><i class="fab fa-pinterest-p" ></i ></a >&nbsp;&nbsp;#}
                     {#                    </div >#}
-                    <button type="button" id="hidemodal" class="btn btn-secondary" data-dismiss="modal" >Close</button >
+                    <button type="button" id="hidemodal" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     {#                <button type="button" class="btn btn-primary" >Save changes</button >#}
-                </div >
-            </div >
-        </div >
-    </div >
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
-<script type="text/javascript" >
+<script type="text/javascript">
     $(document).ready(function () {
         $(".quickviewbtn").click(function () {
                 {#var modalDom = document.getElementById('modalcontent');#}
@@ -1017,9 +1030,9 @@
         });
 
     });
-</script >
-<div id="modal-div" >
-</div >
+</script>
+<div id="modal-div">
+</div>
 {#<script type="text/javascript" >#}
 {#    $(document).ready(function () {#}
 {#        var modalDiv = $("#modal-div");#}
@@ -1038,7 +1051,62 @@
 
 
 
-{% block body %}
+{% block full_body %}
+    <div class="col-12 ">
+        <div class="col-lg-2 no-padding" style="z-index: 4000; background-color: white; height: 100%;position: fixed; margin-top: 65px;">
+            {% block side_bar %}
+                <header class="coffee-2">
+                    <div class="navigation-filter">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-12 col-lg-12 col-xl-12 order-1 order-md-1 no-padding">
+                                    <div class="department-menu_block down">
+                                        <div class="department-menu d-flex justify-content-between align-items-center"
+                                             style="height: 50px"><i
+                                                class="fas fa-bars"></i>All
+                                            departments<span><i
+                                                    class="arrow_carrot-up"></i></span></div>
+                                        <div class="department-dropdown-menu down">
+                                            <ul style="height: 460px" class="department_ul">
+                                                <!-- Nested div for requirement -->
+                                                <div class="vertical-nav">
+                                                    {% for cat in categories %}
+                                                        <li><a href="{{ cat.get_absolute_url }}"><i>
+                                                            <img style="width: 17px" src="
+                                                                    {% static 'assets/images/custom_icons/' %}{{ cat.category_id }}.png"
+                                                                 alt="">
+                                                        </i>{{ cat.category_name }}</a>
+                                                            {% if cat.subcategory_set.count > 0 and cat.category_name not in  cat.subcategory_set.all.0.sub_category_name %}
+                                                                <i class="fa fa-chevron-right float-right"
+                                                                   aria-hidden="true"></i>
+                                                                <ul class="sub-menu">
+                                                                    {% for subcat in cat.subcategory_set.all %}
+                                                                        <li><a href="{{ subcat.get_absolute_url }}">
+                                                                            <i>
+                                                                            </i>&#8226; {{ subcat.sub_category_name }}</a></li>
+                                                                    {% endfor %}
+                                                                </ul>
+                                                            {% endif %}
+                                                        </li>
+                                                    {% endfor %}
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            {% endblock %}
+        </div>
+        <div class="col-lg-10 no-padding" style="float: right">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}
+{% block nav %}
 {% endblock %}
 {% block extra_body %}
 {% endblock %}
@@ -1057,5 +1125,5 @@
 {#        });#}
 {#    });#}
 {#</script >#}
-</body >
-</html >
+</body>
+</html>
