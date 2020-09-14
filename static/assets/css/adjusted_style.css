@@ -1,182 +1,189 @@
-    /*
-        *****************************************************************
-        *	This version is written by SMN Shuvo
-        *****************************************************************
-    */
-    /************************************
-        -------------------------[Table of contents]----------------------
-        ------------------------------------------------------------------
+/*
+    *****************************************************************
+    *	This version is written by SMN Shuvo
+    *****************************************************************
+*/
+/************************************
+    -------------------------[Table of contents]----------------------
+    ------------------------------------------------------------------
 
-        [Let press Ctrl + f and type of paste the key, then press Enter to search the content ]
-        content / #[keyword to find]
-        1. HEADER
-            1.1 Logo
-                1.1.1 Desktop Menu
-                1.1.2 Mobile Menu
-            1.2 Navigation
-        2. Footer
-            2.1 Footer Logo
-        3. Category
-            3.1 Category Select
-        4. Product
-            4.1 Product Detail
-            4.2 Horizontal Padding
-            4.3 Product Promotion
-        5. Special Offer Slider
-        6. Category - Sub Category
+    [Let press Ctrl + f and type of paste the key, then press Enter to search the content ]
+    content / #[keyword to find]
+    1. HEADER
+        1.1 Logo
+            1.1.1 Desktop Menu
+            1.1.2 Mobile Menu
+        1.2 Navigation
+    2. Footer
+        2.1 Footer Logo
+    3. Category
+        3.1 Category Select
+    4. Product
+        4.1 Product Detail
+        4.2 Horizontal Padding
+        4.3 Product Promotion
+    5. Special Offer Slider
+    6. Category - Sub Category
 
-    *************************************/
+*************************************/
 
-    /* HEADER */
-    /*
-     * I have used an approximate value, change it according to your need
-     */
+/* HEADER */
+/*
+ * I have used an approximate value, change it according to your need
+ */
 
-    .col-2{
-      align-content: left;
+.col-2 {
+    align-content: left;
+}
+
+
+/************************************
+    Logo - Desktop Menu
+*************************************/
+.col-2 .logo img {
+    height: auto;
+    width: 120px;
+}
+
+/************************************
+    Logo - Mobile Menu
+*************************************/
+.mobile-menu_logo img {
+    height: auto;
+    width: 120px;
+}
+
+/************************************
+    Navigation
+*************************************/
+#main .navigation {
+    background-color: #fcfcfc;
+}
+
+/************************************
+    Category Select
+*************************************/
+
+
+/************************************
+    Footer Logo
+*************************************/
+.footer-logo img {
+    height: auto;
+    width: 120px;
+}
+
+/************************************
+    Product Detail
+*************************************/
+.shop-detail_info {
+    padding: 20px;
+}
+
+/************************************
+    Horizontal Padding
+*************************************/
+
+.container {
+    max-width: 1366px !important;
+}
+
+/************************************
+    Product Promotion
+*************************************/
+
+.promotional-grid {
+    padding-bottom: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+/************************************
+    Special Offer Slider
+*************************************/
+
+.offer-slider {
+    margin: 50px;
+    padding-bottom: 100px;
+}
+
+
+.offer-slider .slider .slider_wrapper .slider-block .slider-content .slider-text h1 {
+    color: #fcfcfc;
+}
+
+
+/************************************
+    Category - Sub Category
+*************************************/
+
+/* category-menu */
+
+.vertical-nav {
+    height: auto;
+    list-style: none;
+    position: relative;
+    border-bottom: 1px dashed #ebebeb;
+}
+
+.vertical-nav li {
+    border: none;
+    display: inline-block;
+    clear: both;
+
+}
+
+
+.vertical-nav li ul {
+    display: none;
+    padding: 0;
+}
+
+.vertical-nav li:hover ul {
+    display: block;
+}
+
+.vertical-nav li:hover .sub-menu {
+    left: 100%;
+    margin-top: -30.5px;
+    position: absolute;
+    box-shadow: 18px 18px 18px 0 rgba(0, 0, 0, 0.1);
+    animation: linear;
+    animation-name: left-to-right;
+    animation-duration: .1s;
+}
+
+.sub-menu li {
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-width: 180px;
+    z-index: 1;
+}
+
+.sub-menu li a {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+@keyframes left-to-right {
+    0% {
+        left: 70%;
     }
-
-
-    /************************************
-        Logo - Desktop Menu
-    *************************************/
-    .col-2 .logo img{
-      height: auto;
-      width: 120px;
-    }
-    /************************************
-        Logo - Mobile Menu
-    *************************************/
-    .mobile-menu_logo img{
-        height: auto;
-        width: 120px;
-    }
-    /************************************
-        Navigation
-    *************************************/
-    #main .navigation{
-      background-color: #fcfcfc;
-    }
-
-    /************************************
-        Category Select
-    *************************************/
-
-
-    /************************************
-        Footer Logo
-    *************************************/
-    .footer-logo img{
-        height: auto;
-        width: 120px;
-    }
-
-    /************************************
-        Product Detail
-    *************************************/
-    .shop-detail_info{
-        padding: 20px;
-    }
-
-    /************************************
-        Horizontal Padding
-    *************************************/
-
-    .container{
-        max-width: 1366px !important;
-    }
-
-    /************************************
-        Product Promotion
-    *************************************/
-
-    .promotional-grid{
-        padding-bottom: 150px;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-
-    /************************************
-        Special Offer Slider
-    *************************************/
-
-    .offer-slider{
-        margin: 50px;
-        padding-bottom: 100px;
-    }
-
-
-    .offer-slider .slider .slider_wrapper .slider-block .slider-content .slider-text h1 {
-        color: #fcfcfc;
-    }
-
-
-    /************************************
-        Category - Sub Category
-    *************************************/
-
-    /* category-menu */
-
-    .vertical-nav {
-        height:auto;
-        list-style:none;
-        position: relative;
-        border-bottom: 1px dashed #ebebeb;
-    }
-    .vertical-nav li {
-        border: none;
-        display: inline-block;
-        clear:both;
-
-    }
-
-
-
-    .vertical-nav li ul {
-        display: none;
-        padding: 0;
-    }
-    .vertical-nav li:hover ul {
-        display: block;
-    }
-    .vertical-nav li:hover .sub-menu
-    {
+    100% {
         left: 100%;
-        margin-top: -30.5px;
-        position: absolute;
-        box-shadow: 18px 18px 18px 0 rgba(0, 0, 0, 0.1);
-        animation:linear;
-        animation-name: left-to-right;
-        animation-duration: .1s;
     }
-    .sub-menu li
-    {
-        top: 0;
-        left: 100%;
-        width: 100%;
-        min-width: 180px;
-        z-index:1;
-    }
-    .sub-menu li a
-    {
-        display:inline-block;
-        padding: 0 10px;
-    }
+}
 
-    @keyframes left-to-right {
-        0% { left: 70%;}
-        100%{ left : 100%;}
-    }
+/* ends */
 
-    /* ends */
+/*
+Responsive navigation bar
+*/
 
-    /*
-    Responsive navigation bar
-    */
-
-    @media only screen and (max-width: 760px){
-        .vertical-nav li:hover .sub-menu{
+@media only screen and (max-width: 760px) {
+    .vertical-nav li:hover .sub-menu {
         left: 0%;
         margin-top: 12.5px;
         position: relative;
@@ -186,17 +193,20 @@
         animation-duration: .5s;
     }
 
-    .sub-menu li
-    {
+    .sub-menu li {
         top: 0;
         width: 100%;
         min-width: 180px;
-        z-index:1;
+        z-index: 1;
     }
 
     @keyframes left-to-right {
-        0% { top: 00%;}
-        100%{ top : 20%;}
+        0% {
+            top: 00%;
+        }
+        100% {
+            top: 20%;
+        }
     }
 
     /* hide border */
@@ -207,15 +217,409 @@
         border: none;
     }
 
+}
+
+
+/*for delivery status page*/
+
+.status {
+    position: relative;
+    width: 100%;
+
+}
+
+.status::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 100%;
+    background: #007277;
+    top: 0;
+    right: 0;
+}
+
+.status li {
+    padding: 20px 28px;
+}
+
+.status li div {
+    padding: 0px;
+}
+
+.up_time {
+    position: absolute;
+    right: -17px;
+    height: 35px;
+    text-align: center;
+    width: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    background-color: #007277;
+}
+
+.up_time p span {
+    font-family: 'Cera Pro Regular';
+    font-size: 8px;
+    color: #fff;
+    line-height: 35px;
+}
+
+.status_content {
+    text-align: right;
+}
+
+.status_content h4 {
+    font-family: 'Cera Pro Regular';
+    font-weight: 700;
+    color: #484848;
+}
+
+.status_content span {
+    font-family: 'Cera Pro Regular';
+    font-size: 12px;
+    color: #7f7f7f;
+}
+
+.status_content .m_time {
+    display: none;
+}
+
+.status_content p {
+    font-family: 'Cera Pro Regular';
+    font-size: 14px;
+    color: #636363;
+}
+
+.item_part {
+    height: 100vh;
+}
+
+.deli_header {
+    font-family: 'Cera Pro Regular';
+}
+
+.deli_header h2 {
+    font-family: 'Cera Pro Regular';
+    color: #484848;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.progressbar {
+    /* counter-reset: step; */
+
+    width: 100%;
+}
+
+.progressbar li {
+    list-style-type: none;
+    display: inline-block;
+    width: 180px;
+    text-align: center;
+    position: relative;
+    font-family: 'Cera Pro Regular';
+
+}
+
+.progressbar li .check_icon {
+    margin: auto;
+    text-align: center;
+    display: block;
+    height: 35px !important;
+    width: 35px !important;
+    line-height: 35px !important;
+    background-color: #007277 !important;
+    border-radius: 50%;
+}
+
+.progressbar li .check_icon::after {
+    position: absolute;
+    content: '';
+    height: 8px;
+    width: 185px;
+    top: 13.5px;
+    z-index: -1;
+    left: 0;
+    background-color: #007277;
+}
+
+.progressbar li:first-child .check_icon::after {
+    width: 85px;
+    left: 100px;
+}
+
+.progressbar li:last-child .check_icon::after {
+    width: 85px;
+}
+
+.check_icon .icon {
+    font-size: 14px !important;
+    color: #fff;
+    line-height: 30px;
+}
+
+.timeline {
+    text-align: right;
+}
+
+.timeline h4 {
+    position: relative;
+    color: #484848;
+    text-transform: uppercase;
+    font-family: 'Cera Pro Regular';
+    font-weight: 700;
+}
+
+.timeline h4::after {
+    position: absolute;
+    content: '';
+    bottom: -4px;
+    right: 0;
+    width: 70px;
+    height: 2px;
+    background: #007277;
+}
+
+.date p {
+    font-size: 14px;
+    color: #636363;
+    font-family: 'Cera Pro Regular';
+}
+
+.current_status {
+    font-family: 'Cera Pro Regular';
+}
+
+.current_status h3 {
+    font-size: 18px;
+    color: #484848;
+    font-weight: 700;
+}
+
+.current_status p {
+    font-size: 14px;
+    color: #636363;
+    padding: 5px 0px;
+    padding-right: 45px !important;
+}
+
+.date {
+    position: relative;
+}
+
+
+.pr_img {
+    height: 350px;
+    border-radius: 4px;
+    border: 1px solid #D6D6D6;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden !important;
+    transition: all .5s linear;
+}
+
+.pr_img .overlay_image {
+    position: absolute;
+    transition: all .4s linear;
+    top: 85%;
+    /* top: 0; */
+    left: 0;
+    cursor: pointer;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pr_img:hover .overlay_image {
+    top: 0;
+}
+
+.product_info h4 {
+    color: #fff;
+    font-family: 'Cera Pro Regular';
+    text-align: left;
+    text-transform: uppercase;
+    margin: 5px auto;
+}
+
+.information {
+    display: block;
+    width: 100%;
+    height: 52px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 17px 0px;
+    text-align: center;
+}
+
+.information h2 {
+    color: #fff;
+    font-family: 'Cera Pro Regular';
+    text-transform: uppercase;
+}
+
+.product_info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pr_img img {
+    height: 100%;
+    width: 100%;
+    transition: all .5s linear;
+}
+
+.cattle_list {
+    margin-top: 20px;
+}
+
+.animated_delivery {
+    animation: up-down 1.5s ease-in-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.product_details {
+    text-align: left;
+    font-family: 'Cera Pro Regular';
+}
+
+.product_details p {
+    text-transform: capitalize;
+}
+
+.product_details p #r_q {
+    display: none;
+}
+
+.prev_head {
+    text-align: center !important;
+}
+
+.prev_head h2 {
+    font-family: 'Cera Pro Regular';
+    position: relative;
+    color: #484848;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.order_image {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.order_image img {
+    height: 300px;
+    width: 100%;
+}
+
+.ordered {
+    margin: auto;
+    text-align: center;
+}
+
+.ordered li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0px 10px;
+    text-transform: uppercase;
+}
+
+.ordered li .order_title h4 {
+    font-family: 'Cera Pro Regular';
+    position: relative;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.ordered li .order_title h4::after {
+    position: absolute;
+    content: '';
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #007277;
+}
+
+.ordered li p {
+    font-family: 'Cera Pro Regular';
+    font-size: 14px;
+    padding: 8px 2px 0px 0px;
+    color: #484848;
+}
+
+.ordered_styling {
+    -webkit-box-shadow: 0px 3px 5px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 5px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 5px -2px rgba(0, 0, 0, 0.75);
+}
+
+/* =============================Responsive start===================== */
+
+@media (max-width: 575px) {
+    .deli_header h2 {
+        font-family: 'Cera Pro Regular';
+        color: #484848;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .ordered li .order_title h4 {
+        font-family: 'Cera Pro Regular';
+        position: relative;
+        font-size: 10px;
+        text-transform: uppercase;
+        color: #000;
     }
 
 
-    /*for delivery status page*/
+    .ordered li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 0px 0px;
+        text-transform: uppercase;
+    }
 
-    .status {
-        position: relative;
-        width: 100%;
+    .ordered li p {
+        font-family: 'Cera Pro Regular';
+        font-size: 9px;
+        padding: 8px 2px 0px 0px;
+        color: #484848;
+    }
 
+    .item_part {
+        height: 100%;
     }
 
     .status::before {
@@ -225,7 +629,7 @@
         height: 100%;
         background: #007277;
         top: 0;
-        right: 0;
+        left: 0;
     }
 
     .status li {
@@ -238,24 +642,26 @@
 
     .up_time {
         position: absolute;
-        right: -17px;
-        height: 35px;
+        left: -11px;
+        height: 25px;
         text-align: center;
-        width: 35px;
-        line-height: 35px;
+        width: 25px;
+        line-height: 25px;
         border-radius: 50%;
         background-color: #007277;
     }
 
     .up_time p span {
-        font-family: 'Cera Pro Regular';
-        font-size: 8px;
-        color: #fff;
-        line-height: 35px;
+        display: none;
     }
 
+    .up_time p span {
+        font-size: 5px;
+    }
+
+
     .status_content {
-        text-align: right;
+        text-align: left;
     }
 
     .status_content h4 {
@@ -271,7 +677,9 @@
     }
 
     .status_content .m_time {
-        display: none;
+        display: block;
+        font-size: 10px;
+        color: #007277 !important;
     }
 
     .status_content p {
@@ -280,669 +688,270 @@
         color: #636363;
     }
 
-    .item_part {
-        height: 100vh;
+    .timeline {
+        text-align: left;
+        margin-top: 20px;
     }
 
-    .deli_header {
-        font-family: 'Cera Pro Regular';
+    .timeline h4::after {
+        left: 0;
     }
 
-    .deli_header h2 {
+    .prev_head h2 {
         font-family: 'Cera Pro Regular';
         color: #484848;
-        font-size: 22px;
+        font-size: 15px;
         font-weight: 700;
         letter-spacing: 1px;
         text-transform: uppercase;
     }
 
-    .progressbar {
-        /* counter-reset: step; */
-
-        width: 100%;
-    }
-
-    .progressbar li {
-        list-style-type: none;
-        display: inline-block;
-        width: 180px;
-        text-align: center;
-        position: relative;
-        font-family: 'Cera Pro Regular';
-
-    }
-
-    .progressbar li .check_icon {
-        margin: auto;
-        text-align: center;
-        display: block;
-        height: 35px !important;
-        width: 35px !important;
-        line-height: 35px !important;
-        background-color: #007277 !important;
-        border-radius: 50%;
-    }
-
-    .progressbar li .check_icon::after {
-        position: absolute;
-        content: '';
-        height: 8px;
-        width: 185px;
-        top: 13.5px;
-        z-index: -1;
-        left: 0;
-        background-color: #007277;
-    }
-
-    .progressbar li:first-child .check_icon::after {
-        width: 85px;
-        left: 100px;
-    }
-
-    .progressbar li:last-child .check_icon::after {
-        width: 85px;
-    }
-
-    .check_icon .icon {
-        font-size: 14px !important;
-        color: #fff;
-        line-height: 30px;
-    }
-
-    .timeline {
-        text-align: right;
-    }
-
-    .timeline h4 {
-        position: relative;
-        color: #484848;
-        text-transform: uppercase;
-        font-family: 'Cera Pro Regular';
-        font-weight: 700;
-    }
-
-    .timeline h4::after {
-        position: absolute;
-        content: '';
-        bottom: -4px;
-        right: 0;
-        width: 70px;
-        height: 2px;
-        background: #007277;
-    }
-
-    .date p {
-        font-size: 14px;
-        color: #636363;
-        font-family: 'Cera Pro Regular';
-    }
-
-    .current_status {
-        font-family: 'Cera Pro Regular';
-    }
-
-    .current_status h3 {
-        font-size: 18px;
-        color: #484848;
-        font-weight: 700;
-    }
-
-    .current_status p {
-        font-size: 14px;
-        color: #636363;
-        padding: 5px 0px;
-        padding-right: 45px !important;
-    }
-
-    .date {
-        position: relative;
-    }
-
-
-
     .pr_img {
-        height: 350px;
-        border-radius: 4px;
-        border: 1px solid #D6D6D6;
-        width: 100%;
-        margin: auto;
-        position: relative;
-        overflow: hidden !important;
-        transition: all .5s linear;
-    }
-
-    .pr_img .overlay_image {
-        position: absolute;
-        transition: all .4s linear;
-        top: 85%;
-        /* top: 0; */
-        left: 0;
-        cursor: pointer;
-        overflow: hidden;
         height: 100%;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
     }
 
-    .pr_img:hover .overlay_image {
-        top: 0;
+    .information {
+        display: block;
+        width: 100%;
+        height: 23px;
+        padding: 4px 0px;
+        text-align: center;
+    }
+
+
+    .information h2 {
+        color: #fff;
+        font-size: 14px;
+        font-family: 'Cera Pro Regular';
+        text-transform: uppercase;
     }
 
     .product_info h4 {
         color: #fff;
+        font-size: 12px;
         font-family: 'Cera Pro Regular';
         text-align: left;
         text-transform: uppercase;
         margin: 5px auto;
     }
 
-    .information {
-        display: block;
-        width: 100%;
-        height: 52px;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 17px 0px;
-        text-align: center;
-    }
 
-    .information h2 {
-        color: #fff;
-        font-family: 'Cera Pro Regular';
-        text-transform: uppercase;
-    }
-
-    .product_info {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .pr_img img {
-        height: 100%;
-        width: 100%;
-        transition: all .5s linear;
-    }
-    .cattle_list{
-        margin-top: 20px;
-    }
-    .animated_delivery {
-        animation: up-down 1.5s ease-in-out infinite alternate-reverse both;
-    }
-
-    @-webkit-keyframes up-down {
-        0% {
-            transform: translateY(10px);
-        }
-
-        100% {
-            transform: translateY(-10px);
-        }
-    }
-
-    @keyframes up-down {
-        0% {
-            transform: translateY(10px);
-        }
-
-        100% {
-            transform: translateY(-10px);
-        }
-    }
-
-    .product_details {
-        text-align: left;
-        font-family: 'Cera Pro Regular';
-    }
-
-    .product_details p {
-        text-transform: capitalize;
-    }
-
-    .product_details p #r_q {
-        display: none;
-    }
-
-    .prev_head {
-        text-align: center !important;
-    }
-
-    .prev_head h2 {
-        font-family: 'Cera Pro Regular';
-        position: relative;
-        color: #484848;
-        font-size: 22px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
-
-    .order_image {
-        height: 300px;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .order_image img {
-        height: 300px;
-        width: 100%;
-    }
-
-    .ordered {
-        margin: auto;
-        text-align: center;
-    }
-
-    .ordered li {
-        list-style-type: none;
-        display: inline-block;
-        padding: 0px 10px;
-        text-transform: uppercase;
-    }
-
-    .ordered li .order_title h4 {
-        font-family: 'Cera Pro Regular';
-        position: relative;
-        font-size: 18px;
-        text-transform: uppercase;
-        color: #000;
-    }
-
-    .ordered li .order_title h4::after {
+    .date .date_content::before {
         position: absolute;
         content: '';
-        bottom: -4px;
-        left: 0;
-        height: 2px;
-        width: 100%;
-        background: #007277;
+        height: 19px;
+        width: 19px;
+        right: -17px;
+        line-height: 25px;
+        text-align: center;
+        /* margin: 0 auto 10px auto; */
+        border: 1px solid #a61420;
+        border-radius: 50%;
+        display: block;
+        background-color: #a61420;
     }
 
-    .ordered li p {
-        font-family: 'Cera Pro Regular';
-        font-size: 14px;
-        padding: 8px 2px 0px 0px;
+    .current_status h3 {
+        font-size: 15px;
         color: #484848;
+        font-weight: 700;
+        padding-bottom: 10px;
     }
 
-    .ordered_styling {
-        -webkit-box-shadow: 0px 3px 5px -2px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 3px 5px -2px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 3px 5px -2px rgba(0, 0, 0, 0.75);
+    .date p {
+        font-size: 12px;
+        color: #636363;
+        font-family: 'Cera Pro Regular';
+        padding-right: 3px;
     }
 
-    /* =============================Responsive start===================== */
+    .current_status p {
+        font-size: 12px;
+        color: #636363;
 
-    @media(max-width:575px) {
-        .deli_header h2 {
-            font-family: 'Cera Pro Regular';
-            color: #484848;
-            font-size: 15px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .ordered li .order_title h4 {
-            font-family: 'Cera Pro Regular';
-            position: relative;
-            font-size: 10px;
-            text-transform: uppercase;
-            color: #000;
-        }
-
-
-        .ordered li {
-            list-style-type: none;
-            display: inline-block;
-            padding: 0px 0px;
-            text-transform: uppercase;
-        }
-
-        .ordered li p {
-            font-family: 'Cera Pro Regular';
-            font-size: 9px;
-            padding: 8px 2px 0px 0px;
-            color: #484848;
-        }
-
-        .item_part {
-            height: 100%;
-        }
-
-        .status::before {
-            position: absolute;
-            content: '';
-            width: 2px;
-            height: 100%;
-            background: #007277;
-            top: 0;
-            left: 0;
-        }
-
-        .status li {
-            padding: 20px 28px;
-        }
-
-        .status li div {
-            padding: 0px;
-        }
-
-        .up_time {
-            position: absolute;
-            left: -11px;
-            height: 25px;
-            text-align: center;
-            width: 25px;
-            line-height: 25px;
-            border-radius: 50%;
-            background-color: #007277;
-        }
-
-        .up_time p span {
-            display: none;
-        }
-
-        .up_time p span {
-            font-size: 5px;
-        }
-
-
-        .status_content {
-            text-align: left;
-        }
-
-        .status_content h4 {
-            font-family: 'Cera Pro Regular';
-            font-weight: 700;
-            color: #484848;
-        }
-
-        .status_content span {
-            font-family: 'Cera Pro Regular';
-            font-size: 12px;
-            color: #7f7f7f;
-        }
-
-        .status_content .m_time {
-            display: block;
-            font-size: 10px;
-            color: #007277 !important;
-        }
-
-        .status_content p {
-            font-family: 'Cera Pro Regular';
-            font-size: 14px;
-            color: #636363;
-        }
-
-        .timeline {
-            text-align: left;
-            margin-top: 20px;
-        }
-
-        .timeline h4::after {
-            left: 0;
-        }
-
-        .prev_head h2 {
-            font-family: 'Cera Pro Regular';
-            color: #484848;
-            font-size: 15px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .pr_img {
-            height: 100%;
-            width: 100%;
-        }
-
-        .information {
-            display: block;
-            width: 100%;
-            height: 23px;
-            padding: 4px 0px;
-            text-align: center;
-        }
-
-
-
-
-        .information h2 {
-            color: #fff;
-            font-size: 14px;
-            font-family: 'Cera Pro Regular';
-            text-transform: uppercase;
-        }
-
-        .product_info h4 {
-            color: #fff;
-            font-size: 12px;
-            font-family: 'Cera Pro Regular';
-            text-align: left;
-            text-transform: uppercase;
-            margin: 5px auto;
-        }
-
-
-        .date .date_content::before {
-            position: absolute;
-            content: '';
-            height: 19px;
-            width: 19px;
-            right: -17px;
-            line-height: 25px;
-            text-align: center;
-            /* margin: 0 auto 10px auto; */
-            border: 1px solid #a61420;
-            border-radius: 50%;
-            display: block;
-            background-color: #a61420;
-        }
-
-        .current_status h3 {
-            font-size: 15px;
-            color: #484848;
-            font-weight: 700;
-            padding-bottom: 10px;
-        }
-
-        .date p {
-            font-size: 12px;
-            color: #636363;
-            font-family: 'Cera Pro Regular';
-            padding-right: 3px;
-        }
-
-        .current_status p {
-            font-size: 12px;
-            color: #636363;
-
-        }
-
-        .current_status {
-            width: 100%;
-        }
-
-        .progressbar li {
-            list-style-type: none;
-            display: inline-block;
-            width: 59px;
-            text-align: center;
-            position: relative;
-        }
-
-        .progressbar li .check_icon::after {
-            position: absolute;
-            content: '';
-            height: 5px;
-            width: 45px;
-            top: 10.5px;
-            z-index: -1;
-            left: -22px;
-            background-color: #007277;
-        }
-
-        .progressbar li:first-child .check_icon::after {
-            width: 40px;
-            left: 150px;
-        }
-
-        .status::before {
-            position: absolute;
-            content: '';
-            width: 2px;
-            height: 100%;
-            background: #636363;
-            top: -4px;
-            right: 0;
-        }
-
-        .progressbar li:last-child .check_icon::after {
-            width: 50px;
-        }
-
-        .progressbar li .check_icon {
-            margin: auto;
-            text-align: center;
-            display: block;
-            height: 25px !important;
-            width: 25px !important;
-            line-height: 25px !important;
-            background-color: #007277 !important;
-            border-radius: 50%;
-        }
-
-        .check_icon .icon {
-            font-size: 12px !important;
-            color: #fff;
-            line-height: 25px;
-        }
-
-        .progressbar li p {
-            font-size: 8px;
-            font-family: 'Cera Pro Regular';
-        }
     }
 
-    /* .prev_order_image{
-      height: 40px;
-      width: 100%;
-    } */
-
-    .prev_order_image {
-        height: 33px;
+    .current_status {
         width: 100%;
     }
 
-
-
-
-    @media(min-width:576px) and (max-width:767px) {
-        .progressbar li {
-            list-style-type: none;
-            display: inline-block;
-            width: 60px;
-            text-align: center;
-            position: relative;
-        }
-
-
-        .progressbar li .check_icon::after {
-            position: absolute;
-            content: '';
-            height: 2px;
-            width: 45px;
-            top: 12.5px;
-            z-index: -1;
-            left: -20px;
-            background-color: brown;
-        }
-
-        .progressbar li:first-child .check_icon::after {
-            width: 40px;
-            left: 150px;
-        }
-
-        .progressbar li:last-child .check_icon::after {
-            width: 50px;
-        }
-
-        .progressbar li .check_icon {
-            margin: auto;
-            text-align: center;
-            display: block;
-            height: 25px !important;
-            width: 25px !important;
-            line-height: 25px !important;
-            background-color: #cb241b !important;
-            border-radius: 50%;
-        }
-
-        .check_icon .icon {
-            font-size: 12px !important;
-            color: #fff;
-            line-height: 25px;
-        }
-
-        .progressbar li p {
-            font-size: 10px;
-            font-family: 'Cera Pro Regular';
-        }
+    .progressbar li {
+        list-style-type: none;
+        display: inline-block;
+        width: 59px;
+        text-align: center;
+        position: relative;
     }
 
-    @media(min-width:768px) and (max-width:991px) {
-        .progressbar li {
-            list-style-type: none;
-            display: inline-block;
-            width: 168px;
-            text-align: center;
-            position: relative;
-        }
+    .progressbar li .check_icon::after {
+        position: absolute;
+        content: '';
+        height: 5px;
+        width: 45px;
+        top: 10.5px;
+        z-index: -1;
+        left: -22px;
+        background-color: #007277;
+    }
 
-        .progressbar li .check_icon::after {
-            position: absolute;
-            content: '';
-            height: 6px;
-            width: 156px;
-            top: 15.5px;
-            z-index: -1;
-            left: -85px;
-            background-color: brown;
-        }
+    .progressbar li:first-child .check_icon::after {
+        width: 40px;
+        left: 150px;
+    }
 
-        .progressbar li:last-child .check_icon::after {
-            width: 161px;
-        }
+    .status::before {
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 100%;
+        background: #636363;
+        top: -4px;
+        right: 0;
+    }
 
-        .progressbar li:first-child .check_icon::after {
-            width: 40px;
-            left: 150px;
-        }
+    .progressbar li:last-child .check_icon::after {
+        width: 50px;
+    }
 
-        .progressbar li p {
-            font-size: 14px;
-            font-family: 'Cera Pro Regular';
-        }
+    .progressbar li .check_icon {
+        margin: auto;
+        text-align: center;
+        display: block;
+        height: 25px !important;
+        width: 25px !important;
+        line-height: 25px !important;
+        background-color: #007277 !important;
+        border-radius: 50%;
+    }
+
+    .check_icon .icon {
+        font-size: 12px !important;
+        color: #fff;
+        line-height: 25px;
+    }
+
+    .progressbar li p {
+        font-size: 8px;
+        font-family: 'Cera Pro Regular';
+    }
+}
+
+/* .prev_order_image{
+  height: 40px;
+  width: 100%;
+} */
+
+.prev_order_image {
+    height: 33px;
+    width: 100%;
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .progressbar li {
+        list-style-type: none;
+        display: inline-block;
+        width: 60px;
+        text-align: center;
+        position: relative;
     }
 
 
+    .progressbar li .check_icon::after {
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 45px;
+        top: 12.5px;
+        z-index: -1;
+        left: -20px;
+        background-color: brown;
+    }
 
-    @media (max-width: 576px){
-        .product .product-name {
-            font-size: 10px;
-        }
+    .progressbar li:first-child .check_icon::after {
+        width: 40px;
+        left: 150px;
+    }
+
+    .progressbar li:last-child .check_icon::after {
+        width: 50px;
+    }
+
+    .progressbar li .check_icon {
+        margin: auto;
+        text-align: center;
+        display: block;
+        height: 25px !important;
+        width: 25px !important;
+        line-height: 25px !important;
+        background-color: #cb241b !important;
+        border-radius: 50%;
+    }
+
+    .check_icon .icon {
+        font-size: 12px !important;
+        color: #fff;
+        line-height: 25px;
+    }
+
+    .progressbar li p {
+        font-size: 10px;
+        font-family: 'Cera Pro Regular';
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .progressbar li {
+        list-style-type: none;
+        display: inline-block;
+        width: 168px;
+        text-align: center;
+        position: relative;
+    }
+
+    .progressbar li .check_icon::after {
+        position: absolute;
+        content: '';
+        height: 6px;
+        width: 156px;
+        top: 15.5px;
+        z-index: -1;
+        left: -85px;
+        background-color: brown;
+    }
+
+    .progressbar li:last-child .check_icon::after {
+        width: 161px;
+    }
+
+    .progressbar li:first-child .check_icon::after {
+        width: 40px;
+        left: 150px;
+    }
+
+    .progressbar li p {
+        font-size: 14px;
+        font-family: 'Cera Pro Regular';
+    }
+}
+
+
+@media (max-width: 576px) {
+    .product .product-name {
+        font-size: 10px;
+    }
+
     .product .product_images {
         padding: 0px;
     }
-    .product_images{
+
+    .product_images {
         height: 100px;
         width: 100%;
         overflow: hidden;
     }
+
     .product_images .product-img {
         height: 100%;
         width: 100%;
@@ -951,7 +960,8 @@
         justify-content: center;
         align-items: center;
     }
-    .product .product-price{
+
+    .product .product-price {
         font-family: "Cera Pro Medium";
         font-size: 12px;
         color: #252525;
@@ -959,6 +969,7 @@
         display: block;
         transition: .4s ease;
     }
+
     .all_btn {
         width: 146px !important;
         display: block !important;
@@ -966,6 +977,7 @@
         height: 31px !important;
         line-height: 29px !important;
     }
+
     .product .product-type {
         font-family: "Cera Pro Regular";
         font-size: 12px;
@@ -976,256 +988,284 @@
         letter-spacing: 1px;
         margin-bottom: 5px;
     }
+
     .product {
         text-align: center;
         padding: 10px 5px 5px;
         margin-bottom: 0;
         height: 300px !important;
     }
+
     /* .banner_v3 {
         margin-bottom: 30px;
         margin-top: -68px;
     } */
 
-    }
+}
 
 
-       /* ============================ custom css for product class ==================== */
-    .product:hover:after {
-      height: 45px;
-      box-shadow: 0px 20px 32px 0 rgba(53, 78, 84, 0.15);
-      opacity: 1;
-      bottom: -40px;
-      display: none !important;
-    }
+/* ============================ custom css for product class ==================== */
+.product:hover:after {
+    height: 45px;
+    box-shadow: 0px 20px 32px 0 rgba(53, 78, 84, 0.15);
+    opacity: 1;
+    bottom: -40px;
+    display: none !important;
+}
 
-    .product:after {
-      content: '';
-      position: absolute;
-      display: block;
-      bottom: 0px;
-      left: 0;
-      height: 0px;
-      width: 100%;
-      background-color: white;
-      z-index: 0;
-      opacity: 0;
-      border: 1px solid transparent;
-      transition: 0.3s;
-      display: none !important;
-    }
+.product:after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    left: 0;
+    height: 0px;
+    width: 100%;
+    background-color: white;
+    z-index: 0;
+    opacity: 0;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    display: none !important;
+}
 
-    /* ============================ custom css for product class end ==================== */
-    .product {
-      position: relative;
-      margin-bottom: 0px !important;
-      overflow: hidden;
-      border-radius: 4px !important;
-        height: 300px !important;
-    }
-    .product:hover .cart_overlay {
-      transform: scale(1);
-      transition: all 0.3s linear;
-    }
-    .cart_overlay {
-      position: absolute;
-      text-align: center;
-      border-radius: 4px !important;
-      top: 0;
-      transform: scale(0);
-      left: 0;
-      transition: all 0.3s linear;
-      content: '';
-      height: 100%;
-      width: 100%;
-      z-index: 2;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    .cart_btn {
-      width: 100%;
-    }
-    .all_btn {
-      margin-top: 0px !important;
-      border-radius: 4px !important;
-      font-size: 12px;
-      height: 35px;
-      width: 100% !important;
-      line-height: 28px;
-    }
-    .overlay_first {
-      display: none;
-      position: relative;
-      text-align: center;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      transform: translate(-50%, -50%);
-    }
-    .overlay_first h2 {
-      font-size: 25px;
-      letter-spacing: 1px;
-      /* font-weight: 700; */
-      color: #fff;
-      text-transform: uppercase;
-      font-family: 'Cera Pro Regular';
-    }
-    .overlay_animated {
-      animation: up-down 0.5s ease-in-out infinite alternate-reverse both;
-    }
+/* ============================ custom css for product class end ==================== */
+.product {
+    position: relative;
+    margin-bottom: 0px !important;
+    overflow: hidden;
+    border-radius: 4px !important;
+    height: 300px !important;
+}
 
-    @-webkit-keyframes up-down {
-      0% {
+.product:hover .cart_overlay {
+    transform: scale(1);
+    transition: all 0.3s linear;
+}
+
+.cart_overlay {
+    position: absolute;
+    text-align: center;
+    border-radius: 4px !important;
+    top: 0;
+    transform: scale(0);
+    left: 0;
+    transition: all 0.3s linear;
+    content: '';
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.cart_btn {
+    width: 100%;
+}
+
+.all_btn {
+    margin-top: 0px !important;
+    border-radius: 4px !important;
+    font-size: 12px;
+    height: 35px;
+    width: 100% !important;
+    line-height: 28px;
+}
+
+.overlay_first {
+    display: none;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay_first h2 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    /* font-weight: 700; */
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Cera Pro Regular';
+}
+
+.overlay_animated {
+    animation: up-down 0.5s ease-in-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes up-down {
+    0% {
         transform: translateY(5px);
-      }
+    }
 
-      100% {
+    100% {
         transform: translateY(-5px);
-      }
     }
+}
 
-    @keyframes up-down {
-      0% {
+@keyframes up-down {
+    0% {
         transform: translateY(10px);
-      }
+    }
 
-      100% {
+    100% {
         transform: translateY(-10px);
-      }
     }
-    .down {
-      font-size: 18px;
-      /* font-weight: 700; */
-      color: #fff;
-      margin-top: 10px;
-    }
-    .bag {
-      font-size: 50px;
-      color: #00eec3;
-      margin-top: 10px;
-    }
-    /* =================================overlay_second css start=============== */
-    .overlay_second {
-      position: relative;
-      text-align: center;
-      display: block;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    .cart_plus li {
-      list-style-type: none;
-      display: inline-block;
-      margin: 3px 8px;
-      color: #fff;
-      cursor: pointer;
-      font-size: 20px;
-    }
-    .second_bag {
-      font-size: 55px !important;
-      color: #00eec3 !important;
-    }
-    .minus {
-      height: 35px;
-      width: 80px;
-      line-height: 35px;
-      border-radius: 30px 0px 0px 30px;
-    }
-    .plus {
-      height: 35px;
-      width: 80px;
-      line-height: 35px;
-      border-radius: 0px 30px 30px 0px;
-    }
-    .overlay_top_price {
-      position: absolute;
-      top: 0px;
-      height: 40px;
-      width: 100%;
-      text-align: center;
-    }
-    .overlay_top_price p {
-      color: #fff;
-      font-size: 25px;
-      line-height: 40px;
-    }
-    .view_details {
-      position: absolute;
-      bottom: 0px;
-      height: 35px;
-      width: 100%;
-    }
-    .btn_details {
-      width: 49% !important;
-        font-size: 12px !important;
-        height: 34px;
-        padding: 0px !important;
+}
 
-    }
-    .btn_details:hover {
-        background-color: white !important;
-        background: rgba(255, 255, 255, 0.7) !important;
-    }
-    .increment_products {
-      text-align: center;
-      margin-bottom: 10px !important;
-    }
-    .increment_products span {
-      font-size: 25px !important;
-      font-weight: 700 !important;
-      font-family: 'Cera Pro Regular';
-    }
-    .product_images {
-      position: relative;
-    }
-    .offer {
-      position: absolute;
-      right: 5px;
-      top: 5px;
-      height: 50px;
-      width: 50px;
-      text-align: center;
-      border-radius: 50%;
-      background-color: #009e82;
-      -webkit-box-shadow: 0px 2px 3px 1px rgba(102, 101, 102, 1);
-      -moz-box-shadow: 0px 2px 3px 1px rgba(102, 101, 102, 1);
-      box-shadow: 0px 2px 3px 1px rgba(102, 101, 102, 1);
-      z-index: 1;
-        padding-top: 12px;
+.down {
+    font-size: 18px;
+    /* font-weight: 700; */
+    color: #fff;
+    margin-top: 10px;
+}
 
-      /*animation: animate 4s linear infinite;*/
-    }
-    .offer span{
-        font-size: 13px;
-        margin-top:50px
-    }
-    @keyframes animate {
-      0% {
+.bag {
+    font-size: 50px;
+    color: #00eec3;
+    margin-top: 10px;
+}
+
+/* =================================overlay_second css start=============== */
+.overlay_second {
+    position: relative;
+    text-align: center;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cart_plus li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 3px 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.second_bag {
+    font-size: 55px !important;
+    color: #00eec3 !important;
+}
+
+.minus {
+    height: 35px;
+    width: 80px;
+    line-height: 35px;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.plus {
+    height: 35px;
+    width: 80px;
+    line-height: 35px;
+    border-radius: 0px 30px 30px 0px;
+}
+
+.overlay_top_price {
+    position: absolute;
+    top: 0px;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay_top_price p {
+    color: #fff;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.view_details {
+    position: absolute;
+    bottom: 0px;
+    height: 35px;
+    width: 100%;
+}
+
+.btn_details {
+    width: 49% !important;
+    font-size: 12px !important;
+    height: 34px;
+    padding: 0px !important;
+
+}
+
+.btn_details:hover {
+    background-color: white !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.increment_products {
+    text-align: center;
+    margin-bottom: 10px !important;
+}
+
+.increment_products span {
+    font-size: 25px !important;
+    font-weight: 700 !important;
+    font-family: 'Cera Pro Regular';
+}
+
+.product_images {
+    position: relative;
+}
+
+.offer {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #009e82;
+    -webkit-box-shadow: 0px 2px 3px 1px rgba(102, 101, 102, 1);
+    -moz-box-shadow: 0px 2px 3px 1px rgba(102, 101, 102, 1);
+    box-shadow: 0px 2px 3px 1px rgba(102, 101, 102, 1);
+    z-index: 1;
+    padding-top: 12px;
+
+    /*animation: animate 4s linear infinite;*/
+}
+
+.offer span {
+    font-size: 13px;
+    margin-top: 50px
+}
+
+@keyframes animate {
+    0% {
         box-shadow: 0 0 0 0 rgba(255, 109, 74, 0.7),
-          0 0 0 0 rgba(255, 109, 74, 0.7);
-      }
-      40% {
+        0 0 0 0 rgba(255, 109, 74, 0.7);
+    }
+    40% {
         box-shadow: 0 0 0 60px rgba(255, 109, 74, 0),
-          0 0 0 0 rgba(255, 109, 74, 0.7);
-      }
-      80% {
+        0 0 0 0 rgba(255, 109, 74, 0.7);
+    }
+    80% {
         box-shadow: 0 0 0 180px rgba(255, 109, 74, 0),
-          0 0 0 50px rgba(255, 109, 74, 0);
-      }
-      100% {
+        0 0 0 50px rgba(255, 109, 74, 0);
+    }
+    100% {
         box-shadow: 0 0 0 0 rgba(255, 109, 74, 0),
-          0 0 0 50px rgba(255, 109, 74, 0);
-      }
+        0 0 0 50px rgba(255, 109, 74, 0);
     }
-    .offer p {
-      line-height: 65px;
-      font-size: 18px;
-      color: #fff;
-      font-family: 'Cera Pro Regular';
-    }
+}
 
-    /* ================== Responsive for mobile ======================= */
-    @media (max-width: 576px) {
-      .overlay_first {
+.offer p {
+    line-height: 65px;
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Cera Pro Regular';
+}
+
+/* ================== Responsive for mobile ======================= */
+@media (max-width: 576px) {
+    .overlay_first {
         display: block;
         position: relative;
         text-align: center;
@@ -1233,63 +1273,88 @@
         left: 50%;
         width: 100%;
         transform: translate(-50%, -50%);
-      }
+    }
 
-      .overlay_second {
+    .overlay_second {
         position: relative;
         text-align: center;
         display: none;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-      }
-      .cart_plus li {
+    }
+
+    .cart_plus li {
         list-style-type: none;
         display: inline-block;
         margin: 3px 8px;
         color: #fff;
         cursor: pointer;
         font-size: 20px;
-      }
-      .second_bag {
+    }
+
+    .second_bag {
         font-size: 45px !important;
         color: #00eec3 !important;
-      }
-      .minus {
+    }
+
+    .minus {
         height: 30px;
         width: 48px;
         line-height: 28px;
-      }
-      .plus {
+    }
+
+    .plus {
         height: 30px;
         width: 48px;
         line-height: 28px;
-      }
-      .overlay_top_price {
+    }
+
+    .overlay_top_price {
         position: absolute;
         top: 0px;
         height: 40px;
         width: 100%;
         text-align: center;
-      }
     }
+}
 
-    .col-12 .no-padding{
-        padding: 0px; !important;
-    }
-    .cartable{
-        margin-bottom: 25px !important;
-    }
-    .product .product-name{
-        text-align: center;
-        font-weight: 0 !important;
-        font-family: "Cera Pro Regular" !important;
-    }
-    .product-price{
-        font-size: 17px !important;
-    }
+.col-12 .no-padding {
+    padding: 0px;
+!important;
+}
+
+.cartable {
+    margin-bottom: 25px !important;
+}
+
+.product .product-name {
+    text-align: center;
+    font-weight: 0 !important;
+    font-family: "Cera Pro Regular" !important;
+}
+
+.product-price {
+    font-size: 17px !important;
+}
 
 
-    .cat-grid{
-        padding-left: 7px !important;
-    }
+.cat-grid {
+    padding-left: 7px !important;
+}
+
+.main_home_banner {
+    margin-left: 12px !important;
+}
+
+.product .product-img img {
+    margin-bottom: -15px !important;
+}
+
+.col-12 .side_bar {
+    /*z-index: 4000;*/
+    background-color: white;
+    height: 100%;
+    position: fixed;
+    margin-top: 65px;
+}
