@@ -98,7 +98,7 @@ class CheckoutForm(forms.Form):
                                   widget=forms.Textarea(attrs={'rows': 3, 'cols': 85}),
                                   max_length=160)
     payment_option = forms.ChoiceField(required=True,
-                                       widget=forms.RadioSelect, choices=PAYMENT_CHOICES)
+                                           widget=forms.RadioSelect, initial='CASH ON', choices=PAYMENT_CHOICES)
     labels = {
         'customer_name' : 'Name',
         'customer_phone': 'Phone',

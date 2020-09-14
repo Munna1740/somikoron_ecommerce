@@ -358,7 +358,10 @@ class CheckoutView(LoginRequiredMixin, View):
 
 class OrderCompleteView(View):
     def get(self, *args, **kwargs):
-        return render(self.request, 'shop/shop_order_complete.html')
+        context = {
+            'categories': get_categories()
+        }
+        return render(self.request, 'shop/shop_order_complete.html',context)
 
 
 class CattleshopView(View):
@@ -492,7 +495,10 @@ def delivery_status(request):
 
 
 def monthly_shopping(request):
-    return render(request, 'monthly_order/monthly_market.html')
+    context = {
+        'categories': get_categories()
+    }
+    return render(request, 'monthly_order/monthly_market.html',context)
 
 
 def place_monthly_order(request):
@@ -534,6 +540,7 @@ def monthly_order_invoice(request, orderid):
     context = {
         'address': address,
         'object': order,
+        'categories': get_categories(),
     }
     return render(request, 'monthly_order/order_invoice.html',context)
 
