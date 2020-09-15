@@ -1,272 +1,267 @@
 {% extends 'shop/nav_footer.html' %}
 {% block body %}
     <!DOCTYPE html>
-    <html lang="en" >
-    <head >
+    <html lang="en">
+    <head>
         {% load static %}
-        <title >{% block head_title %} {{page_title}} {% endblock %}</title >
-        <meta charset="UTF-8" >
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" >
+        <title>{% block head_title %} {{ page_title }} {% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
         <meta name="keywords"
-              content="blog, business, clean, clear, cooporate, creative, design web, flat, marketing, minimal, portfolio, shop, shopping, unique" >
-        <meta name="author" content="MARTECH | Deer Creative Theme" >
+              content="blog, business, clean, clear, cooporate, creative, design web, flat, marketing, minimal, portfolio, shop, shopping, unique">
+        <meta name="author" content="MARTECH | Deer Creative Theme">
         {#        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script >#}
         {#        <link rel="stylesheet" href="assets/css/adjusted_style.css" >#}
-    </head >
-    <body >
-    <div id="main" style="margin-top: 70px" >
+    </head>
+    <body>
+    <div id="main" style="margin-top: 70px">
         <!-- End shop layout-->
-        <div class="ogami-breadcrumb" >
-            <div class="container" >
-                <ul >
-                    <li ><a class="breadcrumb-link" href="{% url 'shop:home' %}" > <i class="fas fa-home" ></i >Home</a ></li >
-                    <li ><a class="breadcrumb-link active" href="" >Item Details</a ></li >
-                </ul >
-            </div >
-        </div >
+        <div class="ogami-breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a class="breadcrumb-link" href="{% url 'shop:home' %}"> <i class="fas fa-home"></i>Home</a>
+                    </li>
+                    <li><a class="breadcrumb-link active" href="">Item Details</a></li>
+                </ul>
+            </div>
+        </div>
         <!-- End breadcrumb-->
-        <div class="shop-layout" >
-            <div class="container" >
-                <div class="row" >
-                    <div class="col-xl-3" >
-                        <div class="shop-sidebar" >
-                            <button class="no-round-btn" id="filter-sidebar--closebtn" >Close sidebar</button >
-                            <div class="shop-sidebar_department" >
-                                <div class="department_top mini-tab-title underline" >
-                                    <h2 class="title" >Departments</h2 >
-                                </div >
-                                <div class="department_bottom" >
-                                    <ul >
-                                        {% for cat in categories %}
-                                            <li ><a class="department-link" href="{{ cat.get_absolute_url }}" >
-                                                <img style="width: 25px" src="{% static 'assets/images/custom_icons/' %}{{ cat.category_id }}.png" alt="" >
-                                                {{ cat.category_name }}</a >
-                                            </li >
-                                        {% endfor %}
-                                    </ul >
-                                </div >
-                            </div >
-                            <div class="shop-sidebar_tag" >
-                                <div class="tag_top mini-tab-title underline" >
-                                    <h2 class="title" >Product tag</h2 >
-                                </div >
-{#                                <div class="tag_bottom" ><a class="tag-btn" href="shop_grid%2blist_3col.html" >organic</a ><a class="tag-btn"#}
-{#                                                                                                                              href="shop_grid%2blist_3col.html" >vegatable</a ><a#}
-{#                                        class="tag-btn" href="shop_grid%2blist_3col.html" >fruits</a ><a class="tag-btn"#}
-{#                                                                                                         href="shop_grid%2blist_3col.html" >fresh#}
-{#                                                                                                                                            meat</a ><a#}
-{#                                        class="tag-btn" href="shop_grid%2blist_3col.html" >fastfood</a ><a class="tag-btn"#}
-{#                                                                                                           href="shop_grid%2blist_3col.html" >natural</a >#}
-{#                                </div >#}
-                            </div >
-                        </div >
-                        <div class="filter-sidebar--background" style="display: none" ></div >
-                    </div >
-                    <div class="col-xl-9" >
-                        <div class="shop-detail" >
-                            <div class="row" >
-                                <div class="col-12" >
-                                    <div id="show-filter-sidebar" >
-                                        <h5 ><i class="fas fa-bars" ></i >Menu</h5 >
-                                    </div >
-                                </div >
-                                <div class="col-12 col-lg-6" >
-                                    <div class="shop-detail_img" >
-                                        <button class="round-icon-btn" id="zoom-btn" ><i class="icon_zoom-in_alt" ></i ></button >
-                                        <div class="big-img" >
+        <div class="shop-layout">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="shop-detail">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div id="show-filter-sidebar">
+                                        <h5><i class="fas fa-bars"></i>Menu</h5>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="shop-detail_img">
+                                        <button class="round-icon-btn" id="zoom-btn"><i class="icon_zoom-in_alt"></i>
+                                        </button>
+                                        <div class="big-img">
                                             {% for  image in object.item.images.all %}
-                                                <div class="big-img_block" ><img src="{{ image.image.url }}" alt="product image" ></div >
+                                                <div class="big-img_block"><img src="{{ image.image.url }}"
+                                                                                alt="product image"></div>
                                                 {#                            <div class="big-img_block"><img src="{%  static 'assets/images/shop/zoom_img_2.png' %}" alt="product image"></div>#}
                                                 {#                            <div class="big-img_block"><img src="{%  static 'assets/images/shop/zoom_img_3.png' %}" alt="product image"></div>#}
                                             {% endfor %}
-                                        </div >
-                                        <div class="slide-img" style="max-height: max-content !important;" >
+                                        </div>
+                                        <div class="slide-img" style="max-height: max-content !important;">
                                             {% for  image in object.item.images.all %}
-                                                <div class="slide-img_block" ><img src="{{ image.image.url }}" alt="product image" ></div >
+                                                <div class="slide-img_block"><img src="{{ image.image.url }}"
+                                                                                  alt="product image"></div>
                                                 {#                        <div class="slide-img_block"><img src="{%  static 'assets/images/shop/zoom_img_2.png' %}" alt="product image"></div>#}
                                                 {#                        <div class="slide-img_block"><img src="{%  static 'assets/images/shop/zoom_img_3.png' %}" alt="product image"></div>#}
                                             {% endfor %}
-                                        </div >
-                                    </div >
-                                    <div class="img_control" ></div >
-                                </div >
-                                <div class="col-12 col-lg-6" >
-                                    <div class="shop-detail_info card cartable" >
-                                        <h2 class="product-name" >{{ object.item.title }}</h2 >
-                                        <p class="product-describe" >{{ object.item.description|truncatewords:25 }} <a class="product-more"
-                                                                                                                       href="#tab-1" >View more <i
-                                                class="arrow_carrot-2right" ></i ></a ></p >
-                                        <p class="delivery-status" >Free delivery</p >
-                                        <div class="price-rate" >
+                                        </div>
+                                    </div>
+                                    <div class="img_control"></div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="shop-detail_info card cartable">
+                                        <h2 class="product-name">{{ object.item.title }}</h2>
+                                        <p class="product-describe">{{ object.item.description|truncatewords:25 }} <a
+                                                class="product-more"
+                                                href="#tab-1">View more <i
+                                                class="arrow_carrot-2right"></i></a></p>
+                                        <p class="delivery-status">Free delivery</p>
+                                        <div class="price-rate">
                                             {% if object.discount_offer > 0 %}
-                                                <h3 class="product-price " style="text-align: center !important;" >
-                                                    <small >৳</small > {{ object.get_discounted_price }}
-                                                    <del >{{ object.item.price }}</del >
-                                                </h3 >
+                                                <h3 class="product-price " style="text-align: center !important;">
+                                                    <small>৳</small> {{ object.get_discounted_price }}
+                                                    <del>{{ object.item.price }}</del>
+                                                </h3>
                                             {% else %}
-                                                <h3 class="product-price" style="text-align: center !important;" >
-                                                    <small >৳</small > {{ object.item.price }}
-                                                </h3 >
+                                                <h3 class="product-price" style="text-align: center !important;">
+                                                    <small>৳</small> {{ object.item.price }}
+                                                </h3>
                                             {% endif %}
-                                            <div style="float: right" >
-                                                <h5 class="product-rated" >
-                                                    {% if object.item.sub_category.category.category_id == 'cattle' %}<small >Owner Rating</small >
+                                            <div style="float: right">
+                                                <h5 class="product-rated">
+                                                    {% if object.item.sub_category.category.category_id == 'cattle' %}
+                                                        <small>Owner Rating</small>
                                                     {% endif %}
-                                                    <i class="icon_star" ></i ><i class="icon_star" ></i ><i
-                                                        class="icon_star" ></i ><i class="icon_star" ></i ><i
-                                                        class="icon_star-half" ></i ><span >(15)</span >
-                                                </h5 >
-                                            </div >
-                                        </div >
+                                                    <i class="icon_star"></i><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i class="icon_star"></i><i
+                                                        class="icon_star-half"></i><span>(15)</span>
+                                                </h5>
+                                            </div>
+                                        </div>
                                         {% if object.item.sub_category.category.category_id == 'cloth' %}
-                                            <div class="color-select" >
-                                                <h5 >Select Color:</h5 ><a class="color bg-danger" href="#" ></a ><a class="color bg-success"
-                                                                                                                     href="#" ></a ><a
-                                                    class="color bg-info" href="#" ></a >
-                                            </div >
+                                            <div class="color-select">
+                                                <h5>Select Color:</h5><a class="color bg-danger" href="#"></a><a
+                                                    class="color bg-success"
+                                                    href="#"></a><a
+                                                    class="color bg-info" href="#"></a>
+                                            </div>
                                         {% endif %}
 
-                                        <div class="quantity-select" style="margin-bottom: 20px" >
-                                            <label for="quantity" >Quantity:</label >
-                                            <input disabled class="no-round-input" id="quantity" type="number" min="0" value="1" >{{ object.unit }}
-                                        </div >
-                                        <div class="product-select" style="text-align: center" >
-                                            <img hidden class="product__image" src="{{ object.item.images.all.0.image.url }}" alt="" >
-                                            <p hidden class="product__name" >{{ object.item.pk }}</p >
-                                            <p hidden class="product__title" >{{ object.item.title }}</p >
-                                            <p hidden class="product__price" >{{ object.get_discounted_price }}</p >
-                                            <button class="add-to-cart normal-btn outline" data-action="ADD_TO_CART" name="btn{{ object.item.pk }}" style="width: 100%" >Add
-                                                                                                                                                  to
-                                                                                                                                                  cart
-                                            </button >
-                                        </div >
-{#                                        <div class="product-share" >#}
-{#                                            <h5 >Share link:</h5 ><a href="#" ><i class="fab fa-facebook-f" > </i ></a ><a href="#" ><i#}
-{#                                                class="fab fa-twitter" ></i ></a ><a href="#" ><i class="fab fa-invision" > </i ></a ><a href="#" ><i#}
-{#                                                class="fab fa-pinterest-p" ></i ></a >#}
-{#                                        </div >#}
-                                    </div >
-                                </div >
-                                <div class="col-12" >
-                                    <div class="shop-detail_more-info" >
-                                        <div id="tab-so3" >
-                                            <ul class="mb-0" >
-                                                <li class="active" ><a href="#tab-1" >DESCRIPTION</a ></li >
-                                                <li ><a href="#tab-3" >Customer Reviews</a ></li >
-                                            </ul >
-                                            <div id="tab-1" >
-                                                <div class="description-block" >
-                                                    <div class="description-item_block" >
-                                                        <div class="row align-items-center" >
-                                                            <div class="col-12 col-md-6" >
-                                                                <div class="specifications_block" >
-                                                                    <table class="shop_attributes table-bordered" >
+                                        <div class="quantity-select" style="margin-bottom: 20px">
+                                            <label for="quantity">Quantity:</label>
+                                            <input disabled class="no-round-input" id="quantity" type="number" min="0"
+                                                   value="1">{{ object.unit }}
+                                        </div>
+                                        <div class="product-select" style="text-align: center">
+                                            <img hidden class="product__image"
+                                                 src="{{ object.item.images.all.0.image.url }}" alt="">
+                                            <p hidden class="product__name">{{ object.item.pk }}</p>
+                                            <p hidden class="product__title">{{ object.item.title }}</p>
+                                            <p hidden class="product__price">{{ object.get_discounted_price }}</p>
+                                            <button class="add-to-cart normal-btn outline" data-action="ADD_TO_CART"
+                                                    name="btn{{ object.item.pk }}" style="width: 100%">Add
+                                                to
+                                                cart
+                                            </button>
+                                        </div>
+                                        {#                                        <div class="product-share" >#}
+                                        {#                                            <h5 >Share link:</h5 ><a href="#" ><i class="fab fa-facebook-f" > </i ></a ><a href="#" ><i#}
+                                        {#                                                class="fab fa-twitter" ></i ></a ><a href="#" ><i class="fab fa-invision" > </i ></a ><a href="#" ><i#}
+                                        {#                                                class="fab fa-pinterest-p" ></i ></a >#}
+                                        {#                                        </div >#}
+                                    </div>
+
+                                    <div class="shop-sidebar_tag">
+                                        <div class="tag_top mini-tab-title underline">
+                                            <h2 class="title">Product tag</h2>
+                                        </div>
+                                        <div class="tag_bottom">
+                                            {% for sub_category in object.item.sub_category.category.subcategory_set.all %}
+                                                <a class="tag-btn"
+                                                   href="{{ sub_category.get_absolute_url }}">{{ sub_category.sub_category_name }}</a>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="shop-detail_more-info">
+                                        <div id="tab-so3">
+                                            <ul class="mb-0">
+                                                <li class="active"><a href="#tab-1">DESCRIPTION</a></li>
+                                                <li><a href="#tab-3">Customer Reviews</a></li>
+                                            </ul>
+                                            <div id="tab-1">
+                                                <div class="description-block">
+                                                    <div class="description-item_block">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-12 col-md-6">
+                                                                <div class="specifications_block">
+                                                                    <table class="shop_attributes table-bordered">
                                                                         {% if object.item.sub_category.category.category_id == 'cattle' %}
-                                                                            <tbody >
-                                                                            <tr >
-                                                                                <th >Breed</th >
-                                                                                <td class="product_weight" >{{ object.item.cattleinfo.Breed }}</td >
-                                                                            </tr >
-                                                                            <tr >
-                                                                                <th >Height</th >
-                                                                                <td class="product_dimensions" >{{ object.item.cattleinfo.height }}</td >
-                                                                            </tr >
-                                                                            <tr >
-                                                                                <th >Live Weight</th >
-                                                                                <td class="product_color" >{{ object.item.cattleinfo.live_weight }}</td >
-                                                                            </tr >
-                                                                            <tr >
-                                                                                <th >Expected Weight</th >
-                                                                                <td class="product_size" >{{ object.item.cattleinfo.expected_weight }}</td >
-                                                                            </tr >
-                                                                            </tbody >
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <th>Breed</th>
+                                                                                <td class="product_weight">{{ object.item.cattleinfo.Breed }}</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Height</th>
+                                                                                <td class="product_dimensions">{{ object.item.cattleinfo.height }}</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Live Weight</th>
+                                                                                <td class="product_color">{{ object.item.cattleinfo.live_weight }}</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Expected Weight</th>
+                                                                                <td class="product_size">{{ object.item.cattleinfo.expected_weight }}</td>
+                                                                            </tr>
+                                                                            </tbody>
                                                                         {% else %}
-                                                                            <tbody >
-                                                                            <tr >
-                                                                                <th >Color</th >
-                                                                                <td class="product_weight" >{{ object.color }}</td >
-                                                                            </tr >
-                                                                            <tr >
-                                                                                <th >Size</th >
-                                                                                <td class="product_size" >{{ object.size }}</td >
-                                                                            </tr >
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <th>Color</th>
+                                                                                <td class="product_weight">{{ object.color }}</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Size</th>
+                                                                                <td class="product_size">{{ object.size }}</td>
+                                                                            </tr>
                                                                             {#                                                                            <tr >#}
                                                                             {#                                                                                <th >Stock Quantity</th >#}
                                                                             {#                                                                                <td class="product_dimensions" >{{ object.stock_quantity }}</td >#}
                                                                             {#                                                                            </tr >#}
-                                                                            <tr >
-                                                                                <th >Additional Info</th >
-                                                                                <td class="product_color" >{{ object.additional_info }}</td >
-                                                                            </tr >
-                                                                            </tbody >
+                                                                            <tr>
+                                                                                <th>Additional Info</th>
+                                                                                <td class="product_color">{{ object.additional_info }}</td>
+                                                                            </tr>
+                                                                            </tbody>
                                                                         {% endif %}
-                                                                    </table >
-                                                                </div >
-                                                            </div >
-                                                            <div class="col-12 col-md-6" >
-                                                                <div class="description-item_text text-center" >
-                                                                    <h2 >Product Description</h2 >
-                                                                    <p style="width: 100%; overflow-x: scroll">{{ object.item.description }}</p >
-                                                                </div >
-                                                            </div >
-                                                        </div >
-                                                    </div >
-                                                </div >
-                                            </div >
-                                            <div id="tab-3" >
-                                                <div class="customer-reviews_block" >
-                                                    <div class="add-review" >
-                                                        <div class="add-review_top" >
-                                                            <h2 >Add Review</h2 >
-                                                        </div >
-                                                        <div class="add-review_bottom" >
-                                                            <form action="#" method="post" >
-                                                                <div class="row" >
-                                                                    <div class="col-12 col-md-6" >
-                                                                        <input class="no-round-input" type="text" placeholder="Name*" >
-                                                                    </div >
-                                                                    <div class="col-12 col-md-6" >
-                                                                        <input class="no-round-input" type="text" placeholder="Email*" >
-                                                                    </div >
-                                                                    <div class="col-12" >
-                                                                        <div class="rating" >
-                                                                            <h5 >Your rating:</h5 ><span ><i class="icon_star" ></i ><i
-                                                                                class="icon_star" ></i ><i class="icon_star" ></i ><i
-                                                                                class="icon_star" ></i ><i class="icon_star" ></i ></span >
-                                                                        </div >
-                                                                    </div >
-                                                                    <div class="col-12" >
-                                                                        <textarea class="textarea-form" id="review" name="" cols="30" rows="4"
-                                                                                  placeholder="Message" ></textarea >
-                                                                    </div >
-                                                                    <div class="col-12" >
-                                                                        <button class="normal-btn" >Submit Review</button >
-                                                                    </div >
-                                                                </div >
-                                                            </form >
-                                                        </div >
-                                                    </div >
-                                                </div >
-                                            </div >
-                                        </div >
-                                    </div >
-                                </div >
-                            </div >
-                        </div >
-                    </div >
-                </div >
-            </div >
-        </div >
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-md-6">
+                                                                <div class="description-item_text text-center">
+                                                                    <h2>Product Description</h2>
+                                                                    <p style="width: 100%; overflow-x: scroll">{{ object.item.description }}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="tab-3">
+                                                <div class="customer-reviews_block">
+                                                    <div class="add-review">
+                                                        <div class="add-review_top">
+                                                            <h2>Add Review</h2>
+                                                        </div>
+                                                        <div class="add-review_bottom">
+                                                            <form action="#" method="post">
+                                                                <div class="row">
+                                                                    <div class="col-12 col-md-6">
+                                                                        <input class="no-round-input" type="text"
+                                                                               placeholder="Name*">
+                                                                    </div>
+                                                                    <div class="col-12 col-md-6">
+                                                                        <input class="no-round-input" type="text"
+                                                                               placeholder="Email*">
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="rating">
+                                                                            <h5>Your rating:</h5><span><i
+                                                                                class="icon_star"></i><i
+                                                                                class="icon_star"></i><i
+                                                                                class="icon_star"></i><i
+                                                                                class="icon_star"></i><i
+                                                                                class="icon_star"></i></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <textarea class="textarea-form" id="review"
+                                                                                  name="" cols="30" rows="4"
+                                                                                  placeholder="Message"></textarea>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <button class="normal-btn">Submit Review
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- End shop layout-->
 
         <!-- End footer-->
-        <script type="text/javascript" >
+        <script type="text/javascript">
             $(document).ready(function () {
                 document.getElementById('floatcart').style.display = 'block'
             })
-        </script >
-    </div >
-    </body >
+        </script>
+    </div>
+    </body>
     <!-- Mirrored from afinda.vn/html/Ogami/shop_detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jun 2020 12:00:56 GMT -->
-    </html >
+    </html>
 {% endblock %}
